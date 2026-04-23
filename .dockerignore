@@ -1,0 +1,92 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+.tox/
+.hypothesis/
+test_*.py
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation
+docs/
+*.md
+
+# Docker
+Dockerfile.dev
+docker-compose.dev.yml
+.dockerignore
+
+# Data
+data/
+logs/
+*.db
+*.sqlite
+*.csv
+
+# Node/Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Misc
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp

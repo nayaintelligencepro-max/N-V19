@@ -1,0 +1,901 @@
+{
+  "root": "c:\\Users\\NAYA\\Desktop\\N-V19",
+  "total_top_level_folders": 64,
+  "total_compile_errors": 0,
+  "folders": [
+    {
+      "folder": "NAYA_CORE",
+      "files": 335,
+      "py": 334,
+      "compile_err": 0,
+      "flags": 85,
+      "dup_groups": 0,
+      "score": 85,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "scripts",
+      "files": 25,
+      "py": 13,
+      "compile_err": 0,
+      "flags": 36,
+      "dup_groups": 0,
+      "score": 36,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "V20_INTELLIGENCE",
+      "files": 31,
+      "py": 31,
+      "compile_err": 0,
+      "flags": 25,
+      "dup_groups": 0,
+      "score": 25,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "SECRETS",
+      "files": 16,
+      "py": 3,
+      "compile_err": 0,
+      "flags": 22,
+      "dup_groups": 0,
+      "score": 22,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_DASHBOARD",
+      "files": 78,
+      "py": 68,
+      "compile_err": 0,
+      "flags": 17,
+      "dup_groups": 0,
+      "score": 17,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_REVENUE_ENGINE",
+      "files": 31,
+      "py": 31,
+      "compile_err": 0,
+      "flags": 17,
+      "dup_groups": 0,
+      "score": 17,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_PROJECT_ENGINE",
+      "files": 166,
+      "py": 158,
+      "compile_err": 0,
+      "flags": 2,
+      "dup_groups": 4,
+      "score": 14,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "api",
+      "files": 14,
+      "py": 14,
+      "compile_err": 0,
+      "flags": 9,
+      "dup_groups": 1,
+      "score": 12,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "REAPERS",
+      "files": 23,
+      "py": 23,
+      "compile_err": 0,
+      "flags": 10,
+      "dup_groups": 0,
+      "score": 10,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "tests",
+      "files": 17,
+      "py": 17,
+      "compile_err": 0,
+      "flags": 10,
+      "dup_groups": 0,
+      "score": 10,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "HUNTING_AGENTS",
+      "files": 16,
+      "py": 11,
+      "compile_err": 0,
+      "flags": 8,
+      "dup_groups": 0,
+      "score": 8,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "PERSISTENCE",
+      "files": 12,
+      "py": 11,
+      "compile_err": 0,
+      "flags": 8,
+      "dup_groups": 0,
+      "score": 8,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "CLAUDE CODE",
+      "files": 15,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 7,
+      "dup_groups": 0,
+      "score": 7,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "RESILIENCE",
+      "files": 3,
+      "py": 3,
+      "compile_err": 0,
+      "flags": 7,
+      "dup_groups": 0,
+      "score": 7,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "EVOLUTION_SYSTEM",
+      "files": 10,
+      "py": 10,
+      "compile_err": 0,
+      "flags": 4,
+      "dup_groups": 0,
+      "score": 4,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_ACCELERATION",
+      "files": 7,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 4,
+      "dup_groups": 0,
+      "score": 4,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_COMMAND_GATEWAY",
+      "files": 14,
+      "py": 14,
+      "compile_err": 0,
+      "flags": 4,
+      "dup_groups": 0,
+      "score": 4,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_OBSERVATION_BUS",
+      "files": 5,
+      "py": 4,
+      "compile_err": 0,
+      "flags": 3,
+      "dup_groups": 0,
+      "score": 3,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "tools",
+      "files": 7,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 2,
+      "dup_groups": 0,
+      "score": 2,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "intelligence",
+      "files": 7,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_EVENT_STREAM",
+      "files": 16,
+      "py": 16,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_ORCHESTRATION",
+      "files": 29,
+      "py": 29,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_SCHEDULER",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "OUTREACH",
+      "files": 9,
+      "py": 9,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "PARALLEL_ENGINE",
+      "files": 3,
+      "py": 3,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "RUNTIME",
+      "files": 14,
+      "py": 14,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "security",
+      "files": 8,
+      "py": 8,
+      "compile_err": 0,
+      "flags": 1,
+      "dup_groups": 0,
+      "score": 1,
+      "compile_err_examples": []
+    },
+    {
+      "folder": ".continue",
+      "files": 1,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": ".pytest_cache",
+      "files": 5,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": ".vscode",
+      "files": 2,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "ASYNC",
+      "files": 1,
+      "py": 1,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "audit",
+      "files": 7,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "bootstrap",
+      "files": 19,
+      "py": 19,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "BUSINESS_ENGINES",
+      "files": 12,
+      "py": 12,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "CATALOGUE_OT",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "CHANNEL_INTELLIGENCE",
+      "files": 8,
+      "py": 8,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "CLIENT_PORTAL",
+      "files": 1,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "CONSTITUTION",
+      "files": 6,
+      "py": 6,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "content",
+      "files": 4,
+      "py": 4,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "contracts",
+      "files": 1,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "data",
+      "files": 53,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "docs",
+      "files": 1,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "EVENT_STREAMING",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "EXECUTIVE_ARCHITECTURE",
+      "files": 8,
+      "py": 8,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "hunting",
+      "files": 7,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "KERNEL",
+      "files": 5,
+      "py": 5,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "ML_ENGINE",
+      "files": 3,
+      "py": 3,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "monitoring",
+      "files": 2,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "N-V19",
+      "files": 0,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_CLOUD_RUN",
+      "files": 7,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "naya_guardian",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "naya_intention_loop",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_INTERFACE",
+      "files": 23,
+      "py": 22,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "naya_memory_narrative",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_REAL_SALES",
+      "files": 9,
+      "py": 7,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "naya_self_diagnostic",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "NAYA_TELEMETRY",
+      "files": 1,
+      "py": 1,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "projects",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "PROTOCOLS",
+      "files": 5,
+      "py": 5,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "SAAS_NIS2",
+      "files": 5,
+      "py": 5,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "SYSTEM_REGISTRY",
+      "files": 4,
+      "py": 4,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "TORI_APP",
+      "files": 24,
+      "py": 0,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "VERSION_CONTROL",
+      "files": 3,
+      "py": 3,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    },
+    {
+      "folder": "ZERO_WASTE",
+      "files": 2,
+      "py": 2,
+      "compile_err": 0,
+      "flags": 0,
+      "dup_groups": 0,
+      "score": 0,
+      "compile_err_examples": []
+    }
+  ],
+  "top_flag_files": [
+    {
+      "file": "SECRETS/secrets_loader.py",
+      "flags": 20
+    },
+    {
+      "file": "scripts/fix_except_pass.py",
+      "flags": 14
+    },
+    {
+      "file": "NAYA_CORE/naya_sovereign_engine.py",
+      "flags": 12
+    },
+    {
+      "file": "scripts/test_v21_turbo.py",
+      "flags": 10
+    },
+    {
+      "file": "api/routers/revenue.py",
+      "flags": 8
+    },
+    {
+      "file": "NAYA_CORE/system_connector.py",
+      "flags": 8
+    },
+    {
+      "file": "PERSISTENCE/persistence_manager.py",
+      "flags": 7
+    },
+    {
+      "file": "NAYA_CORE/cognitive_pipeline.py",
+      "flags": 6
+    },
+    {
+      "file": "NAYA_CORE/v19_2_cyberdefense.py",
+      "flags": 6
+    },
+    {
+      "file": "NAYA_DASHBOARD/NAYA_MONITORING/metrics_collector.py",
+      "flags": 6
+    },
+    {
+      "file": "NAYA_DASHBOARD/views/naya_view.py",
+      "flags": 6
+    },
+    {
+      "file": "NAYA_REVENUE_ENGINE/unified_revenue_engine.py",
+      "flags": 6
+    },
+    {
+      "file": "RESILIENCE/resilience_engine.py",
+      "flags": 6
+    },
+    {
+      "file": "CLAUDE CODE/naya-auditor.md",
+      "flags": 4
+    },
+    {
+      "file": "EVOLUTION_SYSTEM/evolution_orchestrator.py",
+      "flags": 4
+    },
+    {
+      "file": "NAYA_CORE/doctrine_mutation_engine.py",
+      "flags": 4
+    },
+    {
+      "file": "NAYA_CORE/hunt/auto_closer.py",
+      "flags": 4
+    },
+    {
+      "file": "scripts/audit_compact_all.py",
+      "flags": 4
+    },
+    {
+      "file": "scripts/validate_system.py",
+      "flags": 4
+    },
+    {
+      "file": "tests/test_pre_deploy_gate.py",
+      "flags": 4
+    },
+    {
+      "file": "CLAUDE CODE/naya-builder.md",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_CORE/deal_risk_scorer.py",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_CORE/naya_full_activator.py",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_CORE/portfolio_manager.py",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_CORE/real_pipeline_orchestrator.py",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_CORE/integrations/webhook_receiver.py",
+      "flags": 3
+    },
+    {
+      "file": "NAYA_OBSERVATION_BUS/server.py",
+      "flags": 3
+    },
+    {
+      "file": "REAPERS/auto_scanner.py",
+      "flags": 3
+    },
+    {
+      "file": "REAPERS/snapshot_manager.py",
+      "flags": 3
+    },
+    {
+      "file": "tests/conftest.py",
+      "flags": 3
+    },
+    {
+      "file": "HUNTING_AGENTS/strategic_business_creator.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_ACCELERATION/sales_velocity_tracker.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_COMMAND_GATEWAY/gateway.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/scheduler.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/v19_2_auto_learning.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/analytics/conversion_tracker.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/economic/lightning_payment_engine.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/hunt/global_pain_hunter.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_CORE/workflows/prospection_workflow.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_DASHBOARD/NAYA_PERSISTENCE/history_store.py",
+      "flags": 2
+    },
+    {
+      "file": "NAYA_REVENUE_ENGINE/web_scraper.py",
+      "flags": 2
+    },
+    {
+      "file": "REAPERS/security_engine.py",
+      "flags": 2
+    },
+    {
+      "file": "REAPERS/threat_memory.py",
+      "flags": 2
+    },
+    {
+      "file": "scripts/run_all_5_deployments.sh",
+      "flags": 2
+    },
+    {
+      "file": "SECRETS/GUIDE_CHARGEMENT_CLES.md",
+      "flags": 2
+    },
+    {
+      "file": "V20_INTELLIGENCE/ai_advanced/sentiment_radar.py",
+      "flags": 2
+    },
+    {
+      "file": "api/routers/business.py",
+      "flags": 1
+    },
+    {
+      "file": "HUNTING_AGENTS/autonomous_watch.py",
+      "flags": 1
+    },
+    {
+      "file": "HUNTING_AGENTS/forgotten_market_conqueror.py",
+      "flags": 1
+    },
+    {
+      "file": "HUNTING_AGENTS/hunter_integration.py",
+      "flags": 1
+    }
+  ],
+  "top_global_duplicate_groups": [
+    {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "count": 11,
+      "paths": [
+        "api/__init__.py",
+        "api/routers/__init__.py",
+        "data/db/naya_supreme.db-wal",
+        "NAYA_CLOUD_RUN/__init__.py",
+        "NAYA_DASHBOARD/voice/__init__.py",
+        "NAYA_EVENT_STREAM/views/__init__.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_07_NAYA_PAYE/PAINS/__init__.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_07_NAYA_PAYE/PAINS/PAIN_01_NO_MODERN_BANKING/__init__.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_07_NAYA_PAYE/PAINS/PAIN_02_BUSINESS_PAYMENT_FRICTION/__init__.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_07_NAYA_PAYE/PAINS/PAIN_03_CROSS_BORDER_TRANSFERS/__init__.py"
+      ]
+    },
+    {
+      "hash": "44dac919f3933c5c642638e6f039f6fcd7bcc62b08ec6104811fd74f280d6b37",
+      "size": 6846,
+      "count": 6,
+      "paths": [
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_01_CASH_RAPIDE/project_state.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_02_GOOGLE_XR/project_state.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_03_NAYA_BOTANICA/project_state.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_04_TINY_HOUSE/project_state.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_05_MARCHES_OUBLIES/project_state.py",
+        "NAYA_PROJECT_ENGINE/business/projects/PROJECT_06_ACQUISITION_IMMOBILIERE/project_state.py"
+      ]
+    },
+    {
+      "hash": "3902e383fb0d3d573216b1aeb29e84c0b4eec95a252e87ad79dd6e1f96842372",
+      "size": 15,
+      "count": 3,
+      "paths": [
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_1_ALIBABA/requirements.txt",
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_2_SAMSUNG/requirements.txt",
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_3_SAP_ARIBA/requirements.txt"
+      ]
+    },
+    {
+      "hash": "9fdc0e13ad783cd8f055ca1089a859cd50063454cb5a4c86a8ab57d67ad46ba9",
+      "size": 5417,
+      "count": 3,
+      "paths": [
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_1_ALIBABA/service_definition.py",
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_2_SAMSUNG/service_definition.py",
+        "NAYA_PROJECT_ENGINE/business/first_project_queu/SERVICE_3_SAP_ARIBA/service_definition.py"
+      ]
+    }
+  ]
+}
