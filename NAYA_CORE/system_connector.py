@@ -837,7 +837,7 @@ class SystemConnector:
                 "elapsed_s": elapsed,
                 "ok_count": ok_count,
                 "total": len(report) - 1,
-                "timestamp": __import__("datetime").datetime.now(timezone.utc).isoformat() + "Z",
+                "timestamp": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat() + "Z",
             }
 
             self._report = report

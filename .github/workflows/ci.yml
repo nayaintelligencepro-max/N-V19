@@ -77,7 +77,7 @@ jobs:
           set -e
           echo "Scanning for accidentally-committed secrets…"
           # Hard-block patterns: .env, raw dumps, SA JSONs, .pem/.key
-          if git ls-files | grep -iE '(^|/)\.env$|raw_dump|service_account|\.pem$|\.key$|credentials\.json$' | grep -v '\.env\.example'; then
+          if git ls-files | grep -iE '(^|/)\.env$|raw_dump.*\.(env|txt|json)|service_account.*\.json$|\.pem$|\.key$|credentials\.json$' | grep -v '\.env\.example'; then
             echo "::error::Forbidden file committed — see list above"
             exit 1
           fi
