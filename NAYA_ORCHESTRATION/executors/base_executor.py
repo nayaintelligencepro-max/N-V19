@@ -39,7 +39,13 @@ class BaseExecutor(ABC):
                 'timestamp': str
             }
         """
-        raise NotImplementedError
+        return {
+            'status': 'failed',
+            'task_id': task.get('task_id', 'unknown'),
+            'output': {'error': f'Executor {self.__class__.__name__} must implement execute()'},
+            'execution_time': 0.0,
+            'timestamp': __import__('datetime').datetime.now().isoformat(),
+        }
 
     def validate(self) -> bool:
         """Validate that executor prerequisites are met."""

@@ -573,7 +573,21 @@ class OutreachSequenceEngine:
             state.conversion_date = datetime.now().isoformat()
             print(f"✅ CONVERSION: {state.prospect_name} interested!")
             
-            # TODO: Route to CloserAgent
+            # Route to CloserRoutingBridge (V19.5) for closing workflow
+            from NAYA_IMPROVEMENTS.v19_5_upgrades.closer_routing_bridge import (
+                closer_routing_bridge, ConversionEvent, ConversionSignal,
+            )
+            conversion_event = ConversionEvent(
+                prospect_id=state.prospect_id,
+                prospect_name=state.prospect_name,
+                company=getattr(state, 'company', ''),
+                email=state.prospect_email,
+                signal=ConversionSignal.POSITIVE_REPLY,
+                reply_text=reply_text,
+                estimated_value_eur=state.offer_value_eur,
+                sector=getattr(state, 'sector', 'industrie'),
+            )
+            closing_action = closer_routing_bridge.receive_conversion(conversion_event)
             
         elif reply_analysis['sentiment'] == 'objection':
             # Handle specific objection
