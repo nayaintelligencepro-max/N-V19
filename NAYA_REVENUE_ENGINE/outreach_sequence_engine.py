@@ -86,6 +86,9 @@ class SequenceState(BaseModel):
     reply_sentiment: Optional[str] = None  # positive, negative, objection
     last_interaction: Optional[str] = None
     
+    # Prospect context
+    sector: str = "industrie"  # transport, energie, industrie, finance, sante, telecom
+    
     # Outcomes
     status: str = "active"  # active, converted, failed
     conversion_date: Optional[str] = None
@@ -580,12 +583,12 @@ class OutreachSequenceEngine:
             conversion_event = ConversionEvent(
                 prospect_id=state.prospect_id,
                 prospect_name=state.prospect_name,
-                company=getattr(state, 'company', ''),
+                company=state.prospect_company,
                 email=state.prospect_email,
                 signal=ConversionSignal.POSITIVE_REPLY,
                 reply_text=reply_text,
                 estimated_value_eur=state.offer_value_eur,
-                sector=getattr(state, 'sector', 'industrie'),
+                sector=state.sector,
             )
             closing_action = closer_routing_bridge.receive_conversion(conversion_event)
             

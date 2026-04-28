@@ -219,8 +219,8 @@ class PaymentWebhookReceiver:
 
         secret_key = os.environ.get(f"{provider.value.upper()}_WEBHOOK_SECRET", "")
         if not secret_key:
-            log.warning("No webhook secret configured for %s", provider.value)
-            return True
+            log.warning("No webhook secret configured for %s — rejecting", provider.value)
+            return False
 
         payload_bytes = json.dumps(payload, sort_keys=True).encode("utf-8")
         expected = hmac.new(
