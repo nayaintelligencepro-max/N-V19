@@ -1,0 +1,112 @@
+name: Deploy
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Deployment target
+        required: true
+        default: cloud_run
+        type: choice
+        options: [cloud_run, render, vercel, all]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false   # don't cancel in-flight deploys
+
+jobs:
+  cloud-run:
+    if: ${{ github.event_name == 'push' || github.event.inputs.target == 'cloud_run' || github.event.inputs.target == 'all' }}
+    runs-on: ubuntu-latest
+    env:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      GCP_REGION: ${{ secrets.GCP_REGION || 'europe-west1' }}
+      SERVICE_NAME: naya-supreme-api
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gate — GCP creds present?
+        id: gate
+        run: |
+          if [ -z "${{ secrets.GCP_SA_KEY }}" ] || [ -z "${{ secrets.GCP_PROJECT_ID }}" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::GCP_SA_KEY or GCP_PROJECT_ID missing — skipping Cloud Run deploy"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Auth GCP
+        if: steps.gate.outputs.skip == 'false'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up gcloud
+        if: steps.gate.outputs.skip == 'false'
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Submit Cloud Build (uses cloudbuild.yaml)
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          gcloud builds submit \
+            --project=${{ env.GCP_PROJECT_ID }} \
+            --region=${{ env.GCP_REGION }} \
+            --config=cloudbuild.yaml
+
+  render:
+    if: ${{ github.event.inputs.target == 'render' || github.event.inputs.target == 'all' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate — Render creds present?
+        id: gate
+        run: |
+          if [ -z "${{ secrets.RENDER_API_KEY }}" ] || [ -z "${{ secrets.RENDER_SERVICE_ID }}" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::RENDER_API_KEY or RENDER_SERVICE_ID missing — skipping"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Render deploy
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          curl -fsSL -X POST \
+            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys" \
+            -d '{"clearCache":"do_not_clear"}'
+
+  vercel:
+    if: ${{ github.event.inputs.target == 'vercel' || github.event.inputs.target == 'all' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gate — Vercel creds present?
+        id: gate
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ] || [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::VERCEL_TOKEN or VERCEL_PROJECT_ID missing — skipping"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install Vercel CLI
+        if: steps.gate.outputs.skip == 'false'
+        run: npm i -g vercel@latest
+
+      - name: Deploy TORI_APP to Vercel (Production)
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        run: |
+          vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+          vercel build --prod --token=$VERCEL_TOKEN
+          vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN

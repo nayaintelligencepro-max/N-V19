@@ -8,6 +8,7 @@ import json
 import logging
 import urllib.request
 import urllib.parse
+from datetime import datetime, timezone
 from typing import Dict, List, Optional, Any
 
 log = logging.getLogger("NAYA.SUPABASE")
@@ -100,7 +101,7 @@ class SupabaseIntegration:
             "company":    company,
             "sector":     sector,
             "method":     method,
-            "created_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
+            "created_at": __import__("datetime").datetime.now(timezone.utc).isoformat(),
         }
         result = self._request("POST", "naya_revenue",
                                data=[data], use_service=True)

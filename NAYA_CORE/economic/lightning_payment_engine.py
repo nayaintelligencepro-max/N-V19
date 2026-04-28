@@ -110,7 +110,7 @@ class LightningConnector:
     
     async def _create_via_lnd(self, amount_sats: int, description: str, expires_in: int) -> LightningInvoice:
         """Créer via LND (en prod)"""
-        # LND gRPC: delegated to LightningPaymentComplete in NAYA_IMPROVEMENTS/v19_5_upgrades/
+        # TODO: Implémenter appel gRPC à LND quand disponible
         import secrets
         payment_request = f"lnbc{amount_sats}n1p{secrets.token_hex(20)}"
         return LightningInvoice(
@@ -198,7 +198,7 @@ class OnChainBTC:
         try:
             addr_data = self.derived_addresses[order_id]
             # Via Blockchair ou Mempool API
-            # Blockchair/Mempool polling delegated to PaymentWebhookReceiver (V19.5)
+            # TODO: Polling réel
             return True, addr_data["amount_usd"]
         except: return False, None
 
