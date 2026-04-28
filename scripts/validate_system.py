@@ -24,7 +24,7 @@ class SystemValidator:
             "hunting": {"total": 8, "passed": 0, "failed": []},
             "audit": {"total": 6, "passed": 0, "failed": []},
             "content": {"total": 6, "passed": 0, "failed": []},
-            "revenue": {"total": 8, "passed": 0, "failed": []},
+            "revenue": {"total": 7, "passed": 0, "failed": []},
             "security": {"total": 10, "passed": 0, "failed": []},
         }
     
