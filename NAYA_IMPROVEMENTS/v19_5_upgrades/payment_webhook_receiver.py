@@ -104,14 +104,16 @@ class PaymentWebhookReceiver:
     def process_webhook(
         self, provider: PaymentProvider, payload: Dict[str, Any],
         signature: str = "",
+        raw_body: bytes = b"",
     ) -> PaymentNotification:
         """
         Point d'entrée principal pour tous les webhooks de paiement.
+        raw_body: octets bruts du corps HTTP (pour vérification HMAC).
         """
         self.stats["total_received"] += 1
 
         notification = self._parse_payload(provider, payload)
-        notification.verified = self._verify_signature(provider, payload, signature)
+        notification.verified = self._verify_signature(provider, payload, signature, raw_body)
 
         if notification.verified:
             self.stats["total_verified"] += 1
@@ -209,7 +211,8 @@ class PaymentWebhookReceiver:
         )
 
     def _verify_signature(
-        self, provider: PaymentProvider, payload: Dict[str, Any], signature: str,
+        self, provider: PaymentProvider, payload: Dict[str, Any],
+        signature: str, raw_body: bytes = b"",
     ) -> bool:
         if provider == PaymentProvider.MANUAL:
             return True
@@ -222,9 +225,9 @@ class PaymentWebhookReceiver:
             log.warning("No webhook secret configured for %s — rejecting", provider.value)
             return False
 
-        payload_bytes = json.dumps(payload, sort_keys=True).encode("utf-8")
+        body_bytes = raw_body if raw_body else json.dumps(payload, sort_keys=True).encode("utf-8")
         expected = hmac.new(
-            secret_key.encode("utf-8"), payload_bytes, hashlib.sha256,
+            secret_key.encode("utf-8"), body_bytes, hashlib.sha256,
         ).hexdigest()
         return hmac.compare_digest(expected, signature)
 

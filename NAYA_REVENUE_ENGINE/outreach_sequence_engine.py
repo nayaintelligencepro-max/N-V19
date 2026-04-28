@@ -250,6 +250,7 @@ class SequenceGenerator:
             prospect_company=prospect['company'],
             offer_id=offer['offer_id'],
             offer_value_eur=offer['price_eur'],
+            sector=prospect.get('sector', 'industrie'),
             touches=touches,
             created_at=datetime.now().isoformat()
         )

@@ -177,6 +177,19 @@ class BackupEngine:
                 except OSError as e:
                     errors.append(f"Failed to restore {rel_path}: {e}")
 
+        for rel_dir in CRITICAL_DIRS:
+            src_dir = backup_dir / rel_dir
+            if src_dir.is_dir():
+                for py_file in src_dir.rglob("*.py"):
+                    rel = py_file.relative_to(backup_dir)
+                    dst = project_root / rel
+                    dst.parent.mkdir(parents=True, exist_ok=True)
+                    try:
+                        shutil.copy2(str(py_file), str(dst))
+                        files_restored += 1
+                    except OSError as e:
+                        errors.append(f"Failed to restore {rel}: {e}")
+
         log.info("Backup restored: %s files=%d errors=%d", backup_id, files_restored, len(errors))
 
         return RestoreResult(
