@@ -199,8 +199,9 @@ class AuditGenerator:
         sections.append(roadmap_section)
         
         # Create audit object
+        audit_id = f"audit_{hash(prospect_id + company_name) % 1000000}"
         audit = Audit(
-            audit_id=f"audit_{hash(prospect_id + company_name) % 1000000}",
+            audit_id=audit_id,
             prospect_id=prospect_id,
             company_name=company_name,
             sector=sector,
@@ -208,10 +209,10 @@ class AuditGenerator:
             sections=sections,
             iec62443_score=average([s.score for s in sections if s.score]),
             nis2_compliance_score=52,
-            budget_estimate_remediation=75000,  # Moyenne
+            budget_estimate_remediation=75000,
             critical_gaps_count=5,
             quick_wins_count=3,
-            pdf_path=f"/outputs/audit_{hash(prospect_id + company_name) % 1000000}.pdf",
+            pdf_path=f"/outputs/audit_{audit_id}.pdf",
         )
         
         self.audits_created[audit.audit_id] = audit

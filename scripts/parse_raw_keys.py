@@ -170,6 +170,124 @@ def parse_raw_dump():
     if match:
         keys['OLLAMA_API_KEY'] = match.group(1).strip()
 
+    # === GEMINI ===
+    match = re.search(r'clé gemini\s*:\s*(AQ\.[A-Za-z0-9_-]+)', content, re.I)
+    if match:
+        keys['GEMINI_API_KEY'] = match.group(1).strip()
+        keys['GOOGLE_GEMINI_API_KEY'] = match.group(1).strip()
+
+    # === HUGGINGFACE GEMMA4 (separate named key) ===
+    match = re.search(r'Gemma4\s+hugging\s+face\s*:\s*(hf_[A-Za-z0-9]{32,})', content, re.I)
+    if match:
+        keys['HF_GEMMA4_KEY'] = match.group(1).strip()
+
+    # === TELEGRAM BOT (primary extraction from JSON block) ===
+    match = re.search(r'"bot_token"\s*:\s*"(\d+:[A-Za-z0-9_-]+)"', content)
+    if not match:
+        match = re.search(r'(\d{10}:AA[A-Za-z0-9_-]{30,})', content)
+    if match:
+        keys['TELEGRAM_BOT_TOKEN'] = match.group(1).strip()
+    match = re.search(r'"chat_id"\s*:\s*"?(\d{6,})"?', content)
+    if match:
+        keys['TELEGRAM_CHAT_ID'] = match.group(1).strip()
+        keys['TELEGRAM_OWNER_CHAT_ID'] = match.group(1).strip()
+
+    # === STRIPE (test mode keys — publishable + secret) ===
+    match = re.search(r'(pk_test_[A-Za-z0-9_]+)', content)
+    if match:
+        keys['STRIPE_PUBLISHABLE_KEY'] = match.group(1).strip()
+    match = re.search(r'(sk_test_[A-Za-z0-9_]+)', content)
+    if match:
+        keys['STRIPE_SECRET_KEY'] = match.group(1).strip()
+
+    # === SHOPIFY ACCESS TOKEN ===
+    match = re.search(r'"access_token"\s*:\s*"(shpat_[A-Za-z0-9]+)"', content)
+    if not match:
+        match = re.search(r'(shpat_[A-Za-z0-9]{32,})', content)
+    if match:
+        keys['SHOPIFY_ACCESS_TOKEN'] = match.group(1).strip()
+    match = re.search(r'"shop"\s*:\s*"([a-z0-9-]+\.myshopify\.com)"', content)
+    if match:
+        keys['SHOPIFY_SHOP_DOMAIN'] = match.group(1).strip()
+
+    # === PAYPAL ME URL ===
+    match = re.search(r'PAYPAL\s*ME\s*:\s*(https://[\w./]+)', content, re.I)
+    if match:
+        keys['PAYPAL_ME_URL'] = match.group(1).strip()
+
+    # === TIKTOK ===
+    match = re.search(r'"tiktok_token"\s*:\s*"([A-Za-z0-9_-]+)"', content)
+    if not match:
+        match = re.search(r'tiktok_token\s*"?\s*:\s*"?([A-Za-z0-9_-]{20,})', content, re.I)
+    if match:
+        keys['TIKTOK_ACCESS_TOKEN'] = match.group(1).strip()
+    match = re.search(r'TIK\s*TOK\s*BUSINESS\s*nom\s*:\s*(\w+)', content, re.I)
+    if match:
+        keys['TIKTOK_USERNAME'] = match.group(1).strip()
+    match = re.search(r'id\s*tik\s*tok\s*:\s*(\d+)', content, re.I)
+    if match:
+        keys['TIKTOK_BUSINESS_ID'] = match.group(1).strip()
+
+    # === GOOGLE OAUTH 2 (from installed JSON block) ===
+    match = re.search(r'"client_id"\s*:\s*"([^"]+\.apps\.googleusercontent\.com)"', content)
+    if match:
+        keys['GOOGLE_OAUTH_CLIENT_ID'] = match.group(1).strip()
+    match = re.search(r'"client_secret"\s*:\s*"(GOCSPX-[^"]+)"', content)
+    if match:
+        keys['GOOGLE_OAUTH_CLIENT_SECRET'] = match.group(1).strip()
+
+    # === GOOGLE OAUTH TOKEN (refresh/access) ===
+    match = re.search(r'"refresh_token"\s*:\s*"(1//[^"]+)"', content)
+    if match:
+        keys['GOOGLE_OAUTH_REFRESH_TOKEN'] = match.group(1).strip()
+    match = re.search(r'"token"\s*:\s*"(ya29\.[^"]+)"', content)
+    if match:
+        keys['GOOGLE_OAUTH_ACCESS_TOKEN'] = match.group(1).strip()
+
+    # === INSTAGRAM ===
+    match = re.search(r'"instagram_id"\s*:\s*"(\d+)"', content)
+    if match:
+        keys['INSTAGRAM_ID'] = match.group(1).strip()
+    match = re.search(r'"username"\s*:\s*"(nayaservice\w*)"', content, re.I)
+    if match:
+        keys['INSTAGRAM_USERNAME'] = match.group(1).strip()
+
+    # === FACEBOOK ===
+    match = re.search(r'"page_id"\s*:\s*"(\d+)"', content)
+    if match:
+        keys['FACEBOOK_PAGE_ID'] = match.group(1).strip()
+
+    # === WHATSAPP BUSINESS ===
+    match = re.search(r'"whatsapp_id"\s*:\s*"(\d+)"', content)
+    if match:
+        keys['WHATSAPP_BUSINESS_ID'] = match.group(1).strip()
+    match = re.search(r'"phone_number"\s*:\s*"(\+\d+)"', content)
+    if match:
+        keys['WHATSAPP_PHONE'] = match.group(1).strip()
+        keys['OWNER_PHONE'] = match.group(1).strip()
+
+    # === EMAIL (Central identity) ===
+    match = re.search(r'"email"\s*:\s*"(nayaintelligencepro@gmail\.com)"', content)
+    if match:
+        keys['EMAIL_FROM'] = match.group(1).strip()
+        keys['OWNER_EMAIL'] = match.group(1).strip()
+        keys['EMAIL_FROM_NAME'] = 'Naya Intelligence Pro'
+
+    # === GOOGLE SERVICE ACCOUNT (full JSON extraction) ===
+    # We detect the SA JSON block and save it to SECRETS/service_accounts/
+    sa_match = re.search(
+        r'(\{[^{]*"type"\s*:\s*"service_account"[^}]*"universe_domain"\s*:\s*"googleapis\.com"[^}]*\})',
+        content, re.DOTALL
+    )
+    if sa_match:
+        keys['_GOOGLE_SERVICE_ACCOUNT_JSON'] = sa_match.group(1)
+        keys['GOOGLE_APPLICATION_CREDENTIALS'] = 'SECRETS/service_accounts/gcp-service-account.json'
+
+    # === DASHBOARD / SPREADSHEET ===
+    match = re.search(r'"sheet_url"\s*:\s*"(https://docs\.google\.com/spreadsheets/d/[^"]+)"', content)
+    if match:
+        keys['DASHBOARD_SHEET_URL'] = match.group(1).strip()
+
     return keys
 
 
@@ -185,8 +303,32 @@ def merge_with_existing_env():
     return existing
 
 
+def write_service_account_file(keys: dict):
+    """Écrit le service account Google dans SECRETS/service_accounts/."""
+    if '_GOOGLE_SERVICE_ACCOUNT_JSON' not in keys:
+        return None
+    sa_dir = ROOT / 'SECRETS' / 'service_accounts'
+    sa_dir.mkdir(parents=True, exist_ok=True)
+    sa_path = sa_dir / 'gcp-service-account.json'
+    try:
+        import json as _json
+        parsed = _json.loads(keys['_GOOGLE_SERVICE_ACCOUNT_JSON'])
+        sa_path.write_text(_json.dumps(parsed, indent=2, ensure_ascii=False), encoding='utf-8')
+        print(f"   ↳ Service Account JSON → {sa_path}")
+        return str(sa_path)
+    except Exception as exc:
+        print(f"   ⚠ SA JSON non écrit (parse error): {exc}")
+        return None
+
+
 def write_env_file(keys: dict):
     """Écrit le fichier .env avec toutes les clés."""
+    # Écrit le SA JSON si présent (hors .env)
+    sa_path = write_service_account_file(keys)
+    if sa_path:
+        keys['GOOGLE_APPLICATION_CREDENTIALS'] = sa_path
+    keys.pop('_GOOGLE_SERVICE_ACCOUNT_JSON', None)
+
     # Merger avec existant
     existing = merge_with_existing_env()
 
@@ -197,20 +339,25 @@ def write_env_file(keys: dict):
     categories = {
         'LLM & AI': ['ANTHROPIC_API_KEY', 'OPENAI_API_KEY', 'GROQ_API_KEY', 'DEEPSEEK_API_KEY',
                       'HUGGINGFACE_API_KEY', 'HF_API_KEY_1', 'HF_API_KEY_2', 'HF_API_KEY_3', 'HF_API_KEY_4',
+                      'HF_GEMMA4_KEY', 'GEMINI_API_KEY', 'GOOGLE_GEMINI_API_KEY',
                       'MISTRAL_API_KEY', 'DEEPSEEK_BASE_URL'],
         'COMMUNICATION': ['TELEGRAM_BOT_TOKEN', 'TELEGRAM_CHAT_ID', 'TELEGRAM_OWNER_CHAT_ID',
-                          'SENDGRID_API_KEY', 'EMAIL_FROM', 'EMAIL_FROM_NAME'],
+                          'SENDGRID_API_KEY', 'EMAIL_FROM', 'EMAIL_FROM_NAME', 'OWNER_EMAIL', 'OWNER_PHONE'],
         'PROSPECTION': ['SERPER_API_KEY', 'SERPER_API_KEY_DEFAULT', 'SERPER_API_KEY_1',
                         'APOLLO_API_KEY', 'HUNTER_API_KEY'],
         'PAYMENT': ['PAYPAL_ME_URL', 'PAYPAL_CLIENT_ID', 'PAYPAL_CLIENT_SECRET',
-                    'PAYPAL_ME_URL', 'PAYPAL_WEBHOOK_SECRET',
+                    'PAYPAL_WEBHOOK_SECRET',
+                    'STRIPE_PUBLISHABLE_KEY', 'STRIPE_SECRET_KEY', 'STRIPE_WEBHOOK_SECRET',
                     'DEBLOCK_ME_URL', 'REVOLUT_ME_URL'],
-        'ECOMMERCE & SOCIAL': ['SHOPIFY_SHOP_NAME', 'SHOPIFY_SHOP_URL', 'SHOPIFY_ACCESS_TOKEN', 'SHOPIFY_WEBHOOK_SECRET',
-                                'TIKTOK_ACCESS_TOKEN', 'TIKTOK_BUSINESS_ID',
-                                'INSTAGRAM_ID', 'FACEBOOK_PAGE_ID',
-                                'WHATSAPP_PHONE', 'WHATSAPP_ID', 'WHATSAPP_LINK'],
-        'INFRASTRUCTURE': ['NOTION_TOKEN', 'N8N_API_KEY',
+        'ECOMMERCE & SOCIAL': ['SHOPIFY_SHOP_NAME', 'SHOPIFY_SHOP_URL', 'SHOPIFY_SHOP_DOMAIN',
+                                'SHOPIFY_ACCESS_TOKEN', 'SHOPIFY_WEBHOOK_SECRET',
+                                'TIKTOK_ACCESS_TOKEN', 'TIKTOK_USERNAME', 'TIKTOK_BUSINESS_ID',
+                                'INSTAGRAM_ID', 'INSTAGRAM_USERNAME', 'FACEBOOK_PAGE_ID',
+                                'WHATSAPP_PHONE', 'WHATSAPP_ID', 'WHATSAPP_LINK', 'WHATSAPP_BUSINESS_ID'],
+        'INFRASTRUCTURE': ['NOTION_TOKEN', 'N8N_API_KEY', 'DASHBOARD_SHEET_URL',
                            'GOOGLE_CLOUD_PROJECT', 'GOOGLE_PROJECT_NUMBER', 'GOOGLE_APPLICATION_CREDENTIALS',
+                           'GOOGLE_OAUTH_CLIENT_ID', 'GOOGLE_OAUTH_CLIENT_SECRET',
+                           'GOOGLE_OAUTH_REFRESH_TOKEN', 'GOOGLE_OAUTH_ACCESS_TOKEN',
                            'SUPABASE_URL', 'SUPABASE_ANON_KEY', 'SUPABASE_SERVICE_KEY', 'SUPABASE_PROJECT_REF'],
         'DEPLOYMENT': ['RENDER_API_KEY', 'VERCEL_TOKEN', 'VERCEL_AI_KEY',
                        'DOCKER_USERNAME', 'DOCKER_TOKEN',
