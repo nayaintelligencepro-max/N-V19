@@ -2,12 +2,12 @@
   "energie_utilities": {
     "sector": "energie_utilities",
     "winning_patterns": [
-      "notre (×32)",
-      "audit (×32)",
-      "62443 (×32)",
-      "garantit (×32)",
-      "conformité (×32)",
-      "jours (×32)"
+      "notre (×36)",
+      "audit (×36)",
+      "62443 (×36)",
+      "garantit (×36)",
+      "conformité (×36)",
+      "jours (×36)"
     ],
     "losing_patterns": [],
     "optimal_price_range": [
@@ -19,19 +19,19 @@
     ],
     "best_cta": "Disponible pour un appel de 30 min ?",
     "avg_conversion_rate": 100.0,
-    "sample_size": 16,
-    "updated_at": "2026-04-21T06:09:20.766010"
+    "sample_size": 18,
+    "updated_at": "2026-04-28T13:08:15.881444"
   },
   "transport_logistique": {
     "sector": "transport_logistique",
     "winning_patterns": [
-      "notre (×32)",
-      "audit (×32)",
-      "62443 (×32)",
-      "certifié (×32)",
-      "garantit (×32)",
-      "conformité (×32)",
-      "confirmé (×32)"
+      "notre (×36)",
+      "audit (×36)",
+      "62443 (×36)",
+      "certifié (×36)",
+      "garantit (×36)",
+      "conformité (×36)",
+      "confirmé (×36)"
     ],
     "losing_patterns": [],
     "optimal_price_range": [
@@ -44,7 +44,7 @@
     ],
     "best_cta": "Disponible pour un appel de 30 min ?",
     "avg_conversion_rate": 100.0,
-    "sample_size": 16,
-    "updated_at": "2026-04-21T06:09:20.777331"
+    "sample_size": 18,
+    "updated_at": "2026-04-28T13:08:15.886727"
   }
 }

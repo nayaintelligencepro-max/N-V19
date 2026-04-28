@@ -9,8 +9,10 @@ import os
 from typing import Dict, Any
 from datetime import datetime, timezone
 
+from .base_executor import BaseExecutor
 
-class VMExecutor:
+
+class VMExecutor(BaseExecutor):
     """
     Executes tasks on traditional VMs or servers.
 
@@ -22,9 +24,12 @@ class VMExecutor:
     """
 
     def __init__(self, host: str = "localhost", port: int = 22):
+        super().__init__()
+        self.name = "VMExecutor"
         self.host = host or os.environ.get("VM_HOST", "localhost")
         self.port = port
         self.environment = os.environ.get("VM_ENV", "production")
+        self.is_ready = True
 
     def execute(self, task: Dict[str, Any]) -> Dict[str, Any]:
         """
