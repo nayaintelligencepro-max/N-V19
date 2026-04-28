@@ -1,0 +1,49 @@
+============================================================
+RAPPORT CONFORMITÉ NIS2 — NAYA SUPREME V21
+============================================================
+Entreprise   : UniqueCompanyXYZ
+Secteur      : energie_utilities
+Contact      : x@xyz.fr
+Date         : 2026-04-12
+Assessment ID: a8202fdf-f1e0-46f1-bf9f-c998ea6b9231
+
+SCORE DE CONFORMITÉ NIS2 : 0/100
+NIVEAU                   : NON-CONFORME
+
+LACUNES IDENTIFIÉES :
+  ✗ [Q01] Gouvernance: Avez-vous désigné un responsable de la sécurité des réseaux et de l'information (RSSI ou équivalent) ?
+  ✗ [Q02] Gouvernance: La direction générale est-elle formée et tenue responsable de la cybersécurité ?
+  ✗ [Q03] Gouvernance: Disposez-vous d'une politique de sécurité documentée et approuvée par la direction ?
+  ✗ [Q04] Gouvernance: Effectuez-vous des audits de sécurité réguliers (au moins annuels) ?
+  ✗ [Q05] Gestion des risques: Avez-vous une cartographie des actifs critiques et une analyse de risques formelle ?
+  ✗ [Q06] Gestion des risques: Disposez-vous d'un plan de traitement des risques cyber avec priorisation ?
+  ✗ [Q07] Gestion des risques: Évaluez-vous les risques liés à votre chaîne d'approvisionnement (fournisseurs IT/OT) ?
+  ✗ [Q08] Gestion des risques: Appliquez-vous le principe de moindre privilège pour les accès systèmes ?
+  ✗ [Q09] Gestion des incidents: Avez-vous une procédure formelle de détection et réponse aux incidents cyber ?
+  ✗ [Q10] Gestion des incidents: Êtes-vous capable de notifier l'ANSSI/CERT-FR dans les 24h en cas d'incident significatif ?
+  ✗ [Q11] Gestion des incidents: Disposez-vous de journaux (logs) de sécurité avec une rétention d'au moins 12 mois ?
+  ✗ [Q12] Gestion des incidents: Effectuez-vous des exercices de simulation d'incidents cyber (red team, tabletop) ?
+  ✗ [Q13] Continuité d'activité: Disposez-vous d'un Plan de Continuité d'Activité (PCA) et Plan de Reprise (PRA) documentés ?
+  ✗ [Q14] Continuité d'activité: Effectuez-vous des sauvegardes régulières et testez-vous leur restauration ?
+  ✗ [Q15] Continuité d'activité: Avez-vous un RTO (Recovery Time Objective) défini pour vos systèmes critiques ?
+  ✗ [Q16] Sécurité technique: Utilisez-vous la MFA (authentification multi-facteurs) pour les accès critiques ?
+  ✗ [Q17] Sécurité technique: Chiffrez-vous les données sensibles au repos et en transit ?
+  ✗ [Q18] Sécurité technique: Appliquez-vous des correctifs de sécurité dans les 30 jours suivant leur publication ?
+  ✗ [Q19] Sécurité technique: Segmentez-vous votre réseau (OT/IT séparés, DMZ, zones de sécurité) ?
+  ✗ [Q20] Formation & Sensibilisation: Dispensez-vous des formations cybersécurité à l'ensemble des collaborateurs au moins une fois par an ?
+
+RECOMMANDATIONS PRIORITAIRES :
+  → PRIORITÉ Gouvernance: Article 20 NIS2 : obligation de gouvernance pour les entités essentielles et importantes.
+  → PRIORITÉ Gouvernance: Article 20 §1 NIS2 : la direction doit approuver les mesures de gestion des risques.
+  → PRIORITÉ Gouvernance: Article 21 §2 NIS2 : politique de sécurité obligatoire.
+  → PRIORITÉ Gouvernance: Article 21 §2 NIS2 : évaluation et audits réguliers requis.
+  → PRIORITÉ Gestion des risques: Article 21 §2a NIS2 : gestion des risques formelle obligatoire.
+  → PRIORITÉ Gestion des risques: Article 21 §2 NIS2 : mesures proportionnées aux risques identifiés.
+  → PRIORITÉ Gestion des risques: Article 21 §2d NIS2 : sécurité de la chaîne d'approvisionnement.
+  → PRIORITÉ Gestion des risques: Article 21 §2i NIS2 : contrôle d'accès et gestion des identités.
+
+────────────────────────────────────────────────────────────
+Pour accéder au rapport complet avec roadmap de remédiation,
+abonnez-vous au plan NIS2 Starter (500 EUR/mois).
+Contact : naya@naya-supreme.com
+============================================================

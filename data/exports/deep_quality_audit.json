@@ -1,0 +1,863 @@
+{
+  "summary": {
+    "total_files": 1296,
+    "extensions": {
+      "": 10,
+      ".example": 2,
+      ".md": 59,
+      ".py": 1052,
+      ".sh": 28,
+      ".txt": 41,
+      ".json": 43,
+      ".yaml": 5,
+      ".yml": 4,
+      ".optimized": 1,
+      ".real_sales": 1,
+      ".conf": 1,
+      ".log": 1,
+      ".toml": 1,
+      ".ini": 1,
+      ".gz": 1,
+      ".html": 3,
+      ".db": 1,
+      ".db-shm": 1,
+      ".db-wal": 1,
+      ".jsonl": 1,
+      ".lock": 1,
+      ".ts": 4,
+      ".js": 24,
+      ".sql": 1,
+      ".env": 1,
+      ".template": 7
+    },
+    "py_files": 1052
+  },
+  "compile_errors": [],
+  "stub_hotspots": [
+    {
+      "path": ".\\SECRETS\\secrets_loader.py",
+      "type": "pass",
+      "count": 19
+    },
+    {
+      "path": ".\\scripts\\fix_except_pass.py",
+      "type": "pass",
+      "count": 14
+    },
+    {
+      "path": ".\\NAYA_CORE\\naya_sovereign_engine.py",
+      "type": "pass",
+      "count": 12
+    },
+    {
+      "path": ".\\api\\routers\\revenue.py",
+      "type": "pass",
+      "count": 8
+    },
+    {
+      "path": ".\\NAYA_CORE\\system_connector.py",
+      "type": "pass",
+      "count": 8
+    },
+    {
+      "path": ".\\FIX_MASTER.py",
+      "type": "pass",
+      "count": 7
+    },
+    {
+      "path": ".\\PERSISTENCE\\persistence_manager.py",
+      "type": "pass",
+      "count": 7
+    },
+    {
+      "path": ".\\NAYA_CORE\\cognitive_pipeline.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\NAYA_CORE\\v19_2_cyberdefense.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\NAYA_DASHBOARD\\NAYA_MONITORING\\metrics_collector.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\NAYA_DASHBOARD\\views\\naya_view.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\unified_revenue_engine.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\RESILIENCE\\resilience_engine.py",
+      "type": "pass",
+      "count": 6
+    },
+    {
+      "path": ".\\final_audit_v2.py",
+      "type": "pass",
+      "count": 5
+    },
+    {
+      "path": ".\\final_audit_v4.py",
+      "type": "pass",
+      "count": 5
+    },
+    {
+      "path": ".\\NAYA_CORE\\workflows\\__init__.py",
+      "type": "pass",
+      "count": 5
+    },
+    {
+      "path": ".\\audit_script.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\validate_system.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\EVOLUTION_SYSTEM\\evolution_orchestrator.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\NAYA_CORE\\doctrine_mutation_engine.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\auto_closer.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\scripts\\validate_system.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\tests\\test_pre_deploy_gate.py",
+      "type": "pass",
+      "count": 4
+    },
+    {
+      "path": ".\\analyze_repo.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\analyze_repo.py",
+      "type": "except_pass",
+      "count": 3
+    },
+    {
+      "path": ".\\final_audit_v2.py",
+      "type": "except_pass",
+      "count": 3
+    },
+    {
+      "path": ".\\final_audit_v4.py",
+      "type": "except_pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\deal_risk_scorer.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\naya_full_activator.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\portfolio_manager.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\real_pipeline_orchestrator.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\webhook_receiver.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_INTERFACE\\tori_app_bridge.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_OBSERVATION_BUS\\server.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\REAPERS\\auto_scanner.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\REAPERS\\snapshot_manager.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\scripts\\fix_except_pass.py",
+      "type": "except_pass",
+      "count": 3
+    },
+    {
+      "path": ".\\tests\\conftest.py",
+      "type": "pass",
+      "count": 3
+    },
+    {
+      "path": ".\\audit_script.py",
+      "type": "TODO",
+      "count": 2
+    },
+    {
+      "path": ".\\audit_script.py",
+      "type": "FIXME",
+      "count": 2
+    },
+    {
+      "path": ".\\audit_script.py",
+      "type": "NotImplementedError",
+      "count": 2
+    },
+    {
+      "path": ".\\FIX_MASTER.py",
+      "type": "except_pass",
+      "count": 2
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\strategic_business_creator.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_ACCELERATION\\sales_velocity_tracker.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_COMMAND_GATEWAY\\gateway.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\ooda_speed_layer.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\scheduler.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\v19_2_auto_learning.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\analytics\\conversion_tracker.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\economic\\lightning_payment_engine.py",
+      "type": "TODO",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\global_pain_hunter.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\workflows\\prospection_workflow.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_DASHBOARD\\NAYA_PERSISTENCE\\history_store.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\web_scraper.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\REAPERS\\security_engine.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\REAPERS\\threat_memory.py",
+      "type": "pass",
+      "count": 2
+    },
+    {
+      "path": ".\\RESILIENCE\\resilience_engine.py",
+      "type": "except_pass",
+      "count": 2
+    },
+    {
+      "path": ".\\analyze_repo.py",
+      "type": "TODO",
+      "count": 1
+    },
+    {
+      "path": ".\\analyze_repo.py",
+      "type": "FIXME",
+      "count": 1
+    },
+    {
+      "path": ".\\analyze_repo.py",
+      "type": "NotImplementedError",
+      "count": 1
+    },
+    {
+      "path": ".\\audit_v19.py",
+      "type": "TODO",
+      "count": 1
+    },
+    {
+      "path": ".\\audit_v19.py",
+      "type": "FIXME",
+      "count": 1
+    },
+    {
+      "path": ".\\diagnostic.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\diagnostic.py",
+      "type": "except_pass",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v2.py",
+      "type": "TODO",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v2.py",
+      "type": "FIXME",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v2.py",
+      "type": "NotImplementedError",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v4.py",
+      "type": "TODO",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v4.py",
+      "type": "FIXME",
+      "count": 1
+    },
+    {
+      "path": ".\\final_audit_v4.py",
+      "type": "NotImplementedError",
+      "count": 1
+    },
+    {
+      "path": ".\\main.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\test_11_agents_complete.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\validate_system.py",
+      "type": "TODO",
+      "count": 1
+    },
+    {
+      "path": ".\\api\\routers\\business.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\autonomous_watch.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\forgotten_market_conqueror.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\hunter_integration.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\mega_project_hunter.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\pain_hunter_b2b.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\sourcing_procurement_agent.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\intelligence\\qualifier.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_ACCELERATION\\instant_closer.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_ACCELERATION\\real_sale_validator.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_COMMAND_GATEWAY\\replay_guard.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_COMMAND_GATEWAY\\ws_commands.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\business_factory.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\agents\\pain_hunter.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\enrichment\\contact_enricher.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\naya_brain.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\policies\\fallback_policy.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\providers\\anthropic_provider.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\providers\\grok_provider.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\auto_hunt_seeder.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\grok_integration.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\serper_hunter.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\telegram_bot_handler.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\telegram_notifier.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\memory\\vector_store.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\monitoring\\system_watchdog.py",
+      "type": "pass",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\resilience\\self_healing_engine.py",
+      "type": "NotImplementedError",
+      "count": 1
+    }
+  ],
+  "blocking_hotspots": [
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\web_scraper.py",
+      "type": "time_sleep",
+      "count": 11
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\pain_hunter_b2b.py",
+      "type": "requests_get",
+      "count": 7
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\pain_hunter_b2b.py",
+      "type": "time_sleep",
+      "count": 4
+    },
+    {
+      "path": ".\\scripts\\deploy_orchestrator_v2.py",
+      "type": "time_sleep",
+      "count": 4
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\sourcing_procurement_agent.py",
+      "type": "time_sleep",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\auto_closer.py",
+      "type": "time_sleep",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\auto_hunt_seeder.py",
+      "type": "time_sleep",
+      "count": 3
+    },
+    {
+      "path": ".\\NAYA_CORE\\hunt\\global_pain_hunter.py",
+      "type": "time_sleep",
+      "count": 3
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\forgotten_market_conqueror.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\mega_project_hunter.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\naya_sovereign_engine.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\real_pipeline_orchestrator.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\cluster\\distributed_integrity_guard.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\enrichment\\contact_enricher.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\apollo_integration.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_CORE\\monitoring\\core_self_healing.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\naya_intention_loop\\intention_loop.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\polynesia_scraper.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\unified_revenue_engine.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\naya_self_diagnostic\\diagnostic.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\PARALLEL_ENGINE\\parallel_pipeline_manager.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\RESILIENCE\\resilience_engine.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\tools\\pre_deploy_validator.py",
+      "type": "time_sleep",
+      "count": 2
+    },
+    {
+      "path": ".\\bootstrap\\runtime_loop.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\forgotten_market_conqueror.py",
+      "type": "requests_get",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\mega_project_hunter.py",
+      "type": "requests_get",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\sourcing_procurement_agent.py",
+      "type": "requests_get",
+      "count": 1
+    },
+    {
+      "path": ".\\HUNTING_AGENTS\\strategic_business_creator.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\autonomous_engine.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\multi_agent_orchestrator.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\optimization_engine.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\scheduler.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\agents\\pain_hunter.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\agents\\parallel_pipeline_orchestrator.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\cluster\\cluster_consensus_engine.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\evolution\\feedback_loop_engine.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\providers\\huggingface_multi_provider.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\execution\\sovereign_automation\\health_monitor.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\gmail_oauth2.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\serper_hunter.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\serper_multi.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\telegram_bot_handler.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\telegram_command_bot.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\integrations\\telegram_notifier.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\monitoring\\system_watchdog.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\resilience\\circuit_breaker.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_CORE\\resilience\\self_healing_engine.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_DASHBOARD\\ooda_dashboard.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_DASHBOARD\\NAYA_MONITORING\\metrics_collector.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_EVENT_STREAM\\ws_server.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_INTERFACE\\monitoring\\interface_metrics.py",
+      "type": "requests_get",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_ORCHESTRATION\\cluster\\health_monitor.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\followup_sequence_engine.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_REVENUE_ENGINE\\revenue_accelerator.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\NAYA_SCHEDULER\\autonomous_scheduler.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\REAPERS\\reapers_core.py",
+      "type": "while_true",
+      "count": 1
+    },
+    {
+      "path": ".\\REAPERS\\reapers_core.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\RESILIENCE\\resilience_patterns.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\tools\\deploy.py",
+      "type": "time_sleep",
+      "count": 1
+    },
+    {
+      "path": ".\\tools\\setup_telegram.py",
+      "type": "requests_get",
+      "count": 1
+    }
+  ],
+  "duplicate_groups": [
+    [
+      ".\\api\\__init__.py",
+      ".\\api\\routers\\__init__.py",
+      ".\\NAYA_CLOUD_RUN\\__init__.py",
+      ".\\NAYA_DASHBOARD\\voice\\__init__.py",
+      ".\\NAYA_EVENT_STREAM\\views\\__init__.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\__init__.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_01_NO_MODERN_BANKING\\__init__.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_02_BUSINESS_PAYMENT_FRICTION\\__init__.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_03_CROSS_BORDER_TRANSFERS\\__init__.py",
+      ".\\tests\\__init__.py"
+    ],
+    [
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_01_CASH_RAPIDE\\project_state.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_02_GOOGLE_XR\\project_state.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_03_NAYA_BOTANICA\\project_state.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_04_TINY_HOUSE\\project_state.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_05_MARCHES_OUBLIES\\project_state.py",
+      ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_06_ACQUISITION_IMMOBILIERE\\project_state.py"
+    ]
+  ],
+  "pytest_summary": "Popen.__init__() got an unexpected keyword argument 'capture_all'"
+}

@@ -1,0 +1,268 @@
+{
+  "inventory": {
+    "total_files": 1296,
+    "total_dirs": 976,
+    "extensions": [
+      [
+        ".py",
+        1052
+      ],
+      [
+        ".md",
+        59
+      ],
+      [
+        ".json",
+        43
+      ],
+      [
+        ".txt",
+        41
+      ],
+      [
+        ".sh",
+        28
+      ],
+      [
+        ".js",
+        24
+      ],
+      [
+        "",
+        10
+      ],
+      [
+        ".template",
+        7
+      ],
+      [
+        ".yaml",
+        5
+      ],
+      [
+        ".yml",
+        4
+      ],
+      [
+        ".ts",
+        4
+      ],
+      [
+        ".html",
+        3
+      ],
+      [
+        ".example",
+        2
+      ],
+      [
+        ".optimized",
+        1
+      ],
+      [
+        ".real_sales",
+        1
+      ],
+      [
+        ".conf",
+        1
+      ],
+      [
+        ".log",
+        1
+      ],
+      [
+        ".toml",
+        1
+      ],
+      [
+        ".ini",
+        1
+      ],
+      [
+        ".gz",
+        1
+      ]
+    ]
+  },
+  "python_health": {
+    "compile_errors": [],
+    "pytest": {
+      "collected": 0,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "debt": {
+    "counts": {
+      "pass": 296,
+      "TODO": 11,
+      "FIXME": 6,
+      "NotImplementedError": 7,
+      "except_pass": 20
+    },
+    "top_files": [
+      [
+        ".\\SECRETS\\secrets_loader.py",
+        19
+      ],
+      [
+        ".\\scripts\\fix_except_pass.py",
+        17
+      ],
+      [
+        ".\\audit_script.py",
+        15
+      ],
+      [
+        ".\\NAYA_CORE\\naya_sovereign_engine.py",
+        12
+      ],
+      [
+        ".\\final_audit_v2.py",
+        11
+      ],
+      [
+        ".\\final_audit_v4.py",
+        11
+      ],
+      [
+        ".\\analyze_repo.py",
+        9
+      ],
+      [
+        ".\\FIX_MASTER.py",
+        9
+      ],
+      [
+        ".\\api\\routers\\revenue.py",
+        8
+      ],
+      [
+        ".\\NAYA_CORE\\system_connector.py",
+        8
+      ],
+      [
+        ".\\RESILIENCE\\resilience_engine.py",
+        8
+      ],
+      [
+        ".\\PERSISTENCE\\persistence_manager.py",
+        7
+      ],
+      [
+        ".\\NAYA_CORE\\cognitive_pipeline.py",
+        6
+      ],
+      [
+        ".\\NAYA_CORE\\v19_2_cyberdefense.py",
+        6
+      ],
+      [
+        ".\\NAYA_DASHBOARD\\NAYA_MONITORING\\metrics_collector.py",
+        6
+      ],
+      [
+        ".\\NAYA_DASHBOARD\\views\\naya_view.py",
+        6
+      ],
+      [
+        ".\\NAYA_REVENUE_ENGINE\\unified_revenue_engine.py",
+        6
+      ],
+      [
+        ".\\validate_system.py",
+        5
+      ],
+      [
+        ".\\NAYA_CORE\\workflows\\__init__.py",
+        5
+      ],
+      [
+        ".\\EVOLUTION_SYSTEM\\evolution_orchestrator.py",
+        4
+      ],
+      [
+        ".\\NAYA_CORE\\doctrine_mutation_engine.py",
+        4
+      ],
+      [
+        ".\\NAYA_CORE\\hunt\\auto_closer.py",
+        4
+      ],
+      [
+        ".\\scripts\\validate_system.py",
+        4
+      ],
+      [
+        ".\\tests\\test_pre_deploy_gate.py",
+        4
+      ],
+      [
+        ".\\NAYA_CORE\\deal_risk_scorer.py",
+        3
+      ],
+      [
+        ".\\NAYA_CORE\\naya_full_activator.py",
+        3
+      ],
+      [
+        ".\\NAYA_CORE\\portfolio_manager.py",
+        3
+      ],
+      [
+        ".\\NAYA_CORE\\real_pipeline_orchestrator.py",
+        3
+      ],
+      [
+        ".\\NAYA_CORE\\integrations\\webhook_receiver.py",
+        3
+      ],
+      [
+        ".\\NAYA_INTERFACE\\tori_app_bridge.py",
+        3
+      ]
+    ]
+  },
+  "duplicates": [
+    {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": 10,
+      "paths": [
+        ".\\api\\__init__.py",
+        ".\\api\\routers\\__init__.py",
+        ".\\NAYA_CLOUD_RUN\\__init__.py",
+        ".\\NAYA_DASHBOARD\\voice\\__init__.py",
+        ".\\NAYA_EVENT_STREAM\\views\\__init__.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\__init__.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_01_NO_MODERN_BANKING\\__init__.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_02_BUSINESS_PAYMENT_FRICTION\\__init__.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_07_NAYA_PAYE\\PAINS\\PAIN_03_CROSS_BORDER_TRANSFERS\\__init__.py",
+        ".\\tests\\__init__.py"
+      ]
+    },
+    {
+      "hash": "44dac919f3933c5c642638e6f039f6fcd7bcc62b08ec6104811fd74f280d6b37",
+      "count": 6,
+      "paths": [
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_01_CASH_RAPIDE\\project_state.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_02_GOOGLE_XR\\project_state.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_03_NAYA_BOTANICA\\project_state.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_04_TINY_HOUSE\\project_state.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_05_MARCHES_OUBLIES\\project_state.py",
+        ".\\NAYA_PROJECT_ENGINE\\business\\projects\\PROJECT_06_ACQUISITION_IMMOBILIERE\\project_state.py"
+      ]
+    }
+  ],
+  "blocks": {
+    "broken_imports_heuristic": [],
+    "temp_files": [
+      ".\\audit_results.json",
+      ".\\pytest_collect.txt",
+      ".\\pytest_out.txt",
+      ".\\pytest_output.txt",
+      ".\\NAYA_CORE\\temporal_orchestrator.py",
+      ".\\NAYA_CORE\\orchestration\\temporal_orchestrator.py"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+[run]
+branch = True
+include =
+    api/__init__.py
+    api/routers/__init__.py
+    api/routers/system.py
+    api/routers/business.py
+    api/routers/revenue.py
+    api/routers/revenue_routes.py
+    RUNTIME/__init__.py
+    RUNTIME/pydantic_models.py
+    RUNTIME/prometheus_metrics.py
+    RUNTIME/redis_rate_limiting.py
+    RUNTIME/structured_logging.py
+    NAYA_REVENUE_ENGINE/payment_engine.py
+    NAYA_REVENUE_ENGINE/pipeline_tracker.py
+    NAYA_REVENUE_ENGINE/payment_tracker.py
+    NAYA_REVENUE_ENGINE/followup_sequence_engine.py
+    NAYA_CORE/cash_engine_real.py
+    NAYA_CORE/conversion_engine.py
+    NAYA_CORE/revenue_intelligence.py
+    NAYA_CORE/money_notifier.py
+    bootstrap/registry/__init__.py
+    bootstrap/registry/asset_registry.py
+    naya_guardian/__init__.py
+    naya_guardian/guardian.py
+    naya_intention_loop/__init__.py
+    naya_intention_loop/intention_loop.py
+    naya_memory_narrative/__init__.py
+    naya_memory_narrative/narrative_memory.py
+    naya_self_diagnostic/__init__.py
+    naya_self_diagnostic/diagnostic.py
+    SECRETS/secrets_loader.py
+    tests/*.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if TYPE_CHECKING:
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    ^\s*\.\.\.$
+show_missing = True
+skip_empty = True

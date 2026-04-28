@@ -1,0 +1,31 @@
+============================================================
+RAPPORT CONFORMITÉ NIS2 — NAYA SUPREME V21
+============================================================
+Entreprise   : ReportCorp
+Secteur      : manufacturing
+Contact      : r@corp.fr
+Date         : 2026-04-12
+Assessment ID: 102376cc-f4da-412b-97f7-7903f2bf287d
+
+SCORE DE CONFORMITÉ NIS2 : 75/100
+NIVEAU                   : CONFORME
+
+LACUNES IDENTIFIÉES :
+  ✗ [Q16] Sécurité technique: Utilisez-vous la MFA (authentification multi-facteurs) pour les accès critiques ?
+  ✗ [Q17] Sécurité technique: Chiffrez-vous les données sensibles au repos et en transit ?
+  ✗ [Q18] Sécurité technique: Appliquez-vous des correctifs de sécurité dans les 30 jours suivant leur publication ?
+  ✗ [Q19] Sécurité technique: Segmentez-vous votre réseau (OT/IT séparés, DMZ, zones de sécurité) ?
+  ✗ [Q20] Formation & Sensibilisation: Dispensez-vous des formations cybersécurité à l'ensemble des collaborateurs au moins une fois par an ?
+
+RECOMMANDATIONS PRIORITAIRES :
+  → PRIORITÉ Sécurité technique: Article 21 §2i NIS2 : authentification multi-facteurs obligatoire.
+  → PRIORITÉ Sécurité technique: Article 21 §2h NIS2 : chiffrement des données.
+  → PRIORITÉ Sécurité technique: Article 21 §2e NIS2 : sécurité dans l'acquisition et maintenance.
+  → PRIORITÉ Sécurité technique: Article 21 §2 NIS2 : sécurité des réseaux et des systèmes d'information.
+  → PRIORITÉ Formation & Sensibilisation: Article 21 §2g NIS2 : formation et sensibilisation à la cybersécurité.
+
+────────────────────────────────────────────────────────────
+Pour accéder au rapport complet avec roadmap de remédiation,
+abonnez-vous au plan NIS2 Starter (500 EUR/mois).
+Contact : naya@naya-supreme.com
+============================================================
