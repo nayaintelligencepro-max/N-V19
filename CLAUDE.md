@@ -46,7 +46,7 @@ Langues : Français, Anglais, Espagnol, Portugais, Arabe, Wolof
 # Tous les agents tournent en parallèle via le MultiAgentOrchestrator.
 
 ## AGENT 1 — PAIN HUNTER AGENT
-# Fichier : agents/pain_hunter_agent.py
+# Fichier : NAYA_CORE/agents/pain_hunter.py
 # Rôle : Scanner en continu les marchés pour détecter des douleurs solvables avec budget ≥ 1 000 EUR
 # Sources : offres d'emploi RSSI, actualités cyberattaques, appels d'offres, LinkedIn, Serper
 # Déclenchement : toutes les 60 minutes
@@ -70,7 +70,7 @@ SCORING_GRID = {
 }
 
 ## AGENT 2 — RESEARCHER AGENT
-# Fichier : agents/researcher_agent.py
+# Fichier : NAYA_CORE/agents/researcher.py
 # Rôle : Enrichir chaque prospect détecté par PainHunterAgent
 # Sources : Apollo.io, Hunter.io, Serper, scraping web, LinkedIn
 # Input : Pain object
@@ -78,7 +78,7 @@ SCORING_GRID = {
 # Règle : si email non trouvé après 3 sources → marquer "manual_required" et alerter Telegram
 
 ## AGENT 3 — OFFER WRITER AGENT
-# Fichier : agents/offer_writer_agent.py
+# Fichier : NAYA_CORE/agents/offer_writer_advanced.py
 # Rôle : Générer des offres commerciales ultra-personnalisées (PDF + email + LinkedIn)
 # Input : EnrichedProspect + catalogue services + mémoire vectorielle offres gagnantes
 # Output : Offer(pdf_path, email_subject, email_body, linkedin_message, price_eur, tier)
@@ -86,7 +86,7 @@ SCORING_GRID = {
 # Tiers : TIER1=1k-5k | TIER2=5k-20k | TIER3=20k-100k | TIER4=100k+
 
 ## AGENT 4 — OUTREACH AGENT
-# Fichier : agents/outreach_agent.py
+# Fichier : NAYA_CORE/agents/outreach_agent.py
 # Rôle : Exécuter les séquences multi-touch automatisées (7 touches sur 21 jours)
 # Canaux : Email (SendGrid), LinkedIn, WhatsApp Business, Telegram (si B2B tech)
 # Séquence obligatoire :
@@ -102,7 +102,7 @@ SCORING_GRID = {
 # Silence total → ZeroWasteEngine recycle le contenu
 
 ## AGENT 5 — CLOSER AGENT
-# Fichier : agents/closer_agent.py
+# Fichier : NAYA_CORE/agents/closer_advanced.py
 # Rôle : Gérer les réponses, objections, négociations et closing
 # Input : reply_text + prospect_profile + offer_sent
 # Output : response_message + recommended_action (relance / escompte / escalade humaine)
@@ -111,7 +111,7 @@ SCORING_GRID = {
 # Succès closing → déclencher ContractGeneratorAgent
 
 ## AGENT 6 — AUDIT AGENT
-# Fichier : agents/audit_agent.py
+# Fichier : NAYA_CORE/agents/audit_generator.py
 # Rôle : Générer automatiquement des audits IEC 62443 / NIS2 professionnels (5k–20k EUR)
 # Input : company_name + sector + signal_data
 # Output : audit_pdf (rapport 20–40 pages) + recommendations + upsell_proposal
@@ -125,7 +125,7 @@ SCORING_GRID = {
 # Template : professional PDF via reportlab/weasyprint
 
 ## AGENT 7 — CONTENT AGENT
-# Fichier : agents/content_agent.py
+# Fichier : NAYA_CORE/agents/content_engine_advanced.py
 # Rôle : Produire du contenu B2B récurrent (3k–15k EUR/mois abonnement)
 # Types : articles LinkedIn, whitepapers OT, newsletters sectorielles, études de cas, posts
 # Planification : content_strategy.py génère un calendrier 4 semaines
@@ -134,7 +134,7 @@ SCORING_GRID = {
 # Déclenchement : quotidien à 6h00 UTC
 
 ## AGENT 8 — CONTRACT GENERATOR AGENT
-# Fichier : agents/contract_generator_agent.py
+# Fichier : NAYA_CORE/agents/contract_generator_agent.py
 # Rôle : Générer des contrats PDF signables automatiquement après accord client
 # Input : offer_accepted + client_data + legal_template
 # Output : contract_pdf (signable) + invoice_pdf + payment_link (Deblok.me / PayPal.me)
@@ -143,7 +143,7 @@ SCORING_GRID = {
 # Intégration paiement : DeblokEngine + PayPalEngine avec webhook confirmation
 
 ## AGENT 9 — REVENUE TRACKER AGENT
-# Fichier : agents/revenue_tracker_agent.py
+# Fichier : NAYA_CORE/agents/revenue_tracker_agent.py
 # Rôle : Tracker les 4 streams de revenus en temps réel + projection OODA
 # Streams :
 #   Stream 1 — Outreach deals (1k–20k EUR/deal)
@@ -155,7 +155,7 @@ SCORING_GRID = {
 # Output Telegram quotidien 8h00 : briefing complet avec décisions requises
 
 ## AGENT 10 — PARALLEL PIPELINE AGENT
-# Fichier : agents/parallel_pipeline_agent.py
+# Fichier : NAYA_CORE/agents/parallel_pipeline_orchestrator.py
 # Rôle : Gérer 4 slots de projets/deals simultanés avec rechargement automatique
 # Slots actifs V19 :
 #   SLOT 0 : Catalogue OT Transport (15k EUR)
@@ -167,7 +167,7 @@ SCORING_GRID = {
 # MAX_PARALLEL_PROJECTS = 4 (configurable)
 
 ## AGENT 11 — GUARDIAN AGENT (AUTOSCAN / AUTOCYBERSÉCURITÉ / AUTORÉPARATION)
-# Fichier : agents/guardian_agent.py
+# Fichier : NAYA_CORE/agents/guardian_security.py
 # Rôle CRITIQUE : Sécurité totale + auto-réparation + surveillance système 24/7
 # Cycle : toutes les 6h (configurable via GUARDIAN_SCAN_INTERVAL_H)
 # Capacités :

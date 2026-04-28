@@ -117,3 +117,4 @@ yarn-error.log*
 *.tar.gz
 *.zip
 *.tgz
+data/outreach/

@@ -3,7 +3,7 @@ NAYA V19 - Payment Cycle Manager
 Suivi automatique des paiements, relances automatiques si impayes,
 reconciliation et reporting.
 """
-import time, logging, uuid, json, threading
+import os, time, logging, uuid, json, threading
 from typing import Dict, List, Optional
 from dataclasses import dataclass, field
 from enum import Enum

@@ -3,10 +3,15 @@ NAYA — Pipeline Tracker
 Suit chaque prospect de la détection jusqu'au paiement.
 Chaque euro dans le pipeline est visible en temps réel dans TORI.
 """
+from __future__ import annotations
+
 import os, json, time, logging
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, TYPE_CHECKING
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+if TYPE_CHECKING:
+    Prospect = Any  # type: ignore
 
 log = logging.getLogger("NAYA.PIPELINE")
 

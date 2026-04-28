@@ -8,7 +8,7 @@ Fonctionnne sans erreurs répétitives
 
 import os
 import sys
-from typing import Dict, Optional, Any
+from typing import Dict, List, Optional, Any
 from pathlib import Path
 import json
 from datetime import datetime
