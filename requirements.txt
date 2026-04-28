@@ -116,3 +116,24 @@ email-validator>=2.0.0
 bcrypt>=4.1.0                 # jwt_rbac_security.py (auth production)
 websockets>=12.0              # NAYA_DASHBOARD/ooda_dashboard.py (WS live feed)
 
+# ==================== V19.4 IMPROVEMENTS ====================
+# Amélioration #1: Cache System
+redis>=5.0.0                  # L2 cache (déjà présent)
+
+# Amélioration #2: ML Conversion Predictor
+lightgbm>=4.1.0               # ML model (LightGBM)
+xgboost>=2.0.0                # ML model alternatif (XGBoost)
+
+# Amélioration #3: Event Bus (Redis déjà présent)
+
+# Amélioration #4: RAG Offers
+chromadb>=0.4.0               # Vector DB pour RAG
+faiss-cpu>=1.7.4              # Vector similarity search
+
+# Amélioration #5: NLP Signals
+spacy>=3.7.0                  # NLP avancé
+transformers>=4.35.0          # Transformers (déjà présent via sentence-transformers)
+
+# Amélioration #7: Anomaly Detection
+statsmodels>=0.14.0           # Statistical models
+
