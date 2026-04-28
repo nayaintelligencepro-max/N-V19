@@ -61,38 +61,6 @@ class OrchestrationInterfaceBridge:
         log.debug(f"[OrchestrationInterfaceBridge] Executing publish_state")
         return {"status": "ok", "operation": "publish_state", "ts": time.time(), "params": params}
 
-    def publish_state(self, *args, **kwargs) -> Any:
-        """Execute publish_state operation."""
-        with self._lock:
-            self._operation_count += 1
-            t0 = time.time()
-            try:
-                result = self._execute_publish_state(*args, **kwargs)
-                elapsed = (time.time() - t0) * 1000
-                self._history.append({
-                    "op": "publish_state",
-                    "ts": time.time(),
-                    "elapsed_ms": round(elapsed, 1),
-                    "success": True,
-                })
-                if len(self._history) > 500:
-                    self._history = self._history[-500:]
-                self._metrics["publish_state_count"] = self._metrics.get("publish_state_count", 0) + 1
-                self._metrics["publish_state_avg_ms"] = round(
-                    (self._metrics.get("publish_state_avg_ms", 0) * 0.9 + elapsed * 0.1), 2
-                )
-                return result
-            except Exception as e:
-                self._error_count += 1
-                log.error(f"[OrchestrationInterfaceBridge] publish_state error: {e}")
-                return None
-
-    def _execute_publish_state(self, *args, **kwargs) -> Any:
-        """Internal implementation of publish_state."""
-        params = {"args": [str(a)[:50] for a in args], "kwargs": {k: str(v)[:50] for k, v in kwargs.items()}}
-        log.debug(f"[OrchestrationInterfaceBridge] Executing publish_state")
-        return {"status": "ok", "operation": "publish_state", "ts": time.time(), "params": params}
-
     def get_state(self, *args, **kwargs) -> Any:
         """Execute get_state operation."""
         with self._lock:
