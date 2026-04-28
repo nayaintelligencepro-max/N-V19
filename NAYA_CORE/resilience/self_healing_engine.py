@@ -152,8 +152,12 @@ class RecoveryStrategy:
     
     async def attempt_recovery(self, service_name: str, 
                               error: Exception) -> bool:
-        """Attempt to recover service"""
-        raise NotImplementedError
+        """Attempt to recover service — base implementation logs and returns False."""
+        import logging
+        logging.getLogger("NAYA.SELF_HEALING").warning(
+            "No recovery strategy for %s: %s", service_name, error,
+        )
+        return False
 
 class RestartStrategy(RecoveryStrategy):
     """Restart failed module via callback enregistré"""
