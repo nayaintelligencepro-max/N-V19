@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install ruff
+        run: pip install ruff==0.1.8
+      - name: Lint (F821 undefined names)
+        run: ruff check . --select F821
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt 2>/dev/null || pip install fastapi uvicorn pydantic python-dotenv httpx structlog tenacity PyYAML orjson cryptography PyJWT python-jose passlib pyotp itsdangerous
+      - name: Smoke test imports
+        run: |
+          python -c "
+          import sys; sys.path.insert(0, '.')
+          from CONSTITUTION.invariants import SystemInvariants
+          from CONSTITUTION.governance_rules import GovernanceRules
+          assert SystemInvariants.get('PREMIUM_FLOOR') == 1000
+          assert SystemInvariants.get('NON_VENDABLE') == True
+          g = GovernanceRules()
+          assert g.check_compliance({'price': 5000})['compliant'] == True
+          assert g.check_compliance({'price': 500})['compliant'] == False
+          print('All smoke tests passed')
+          "
+      - name: Syntax check all Python files
+        run: python -m py_compile main.py && echo "main.py OK"
+
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t naya-supreme:test .

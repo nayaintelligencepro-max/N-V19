@@ -1,0 +1,119 @@
+# ============================================================================
+# NAYA SUPREME — .gitignore (production-grade)
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.Python
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment files (NEVER commit)
+.env
+.env.*
+!.env.example
+*.env.local
+*.env.production
+*.env.staging
+
+# SECRETS (HARD BLOCK — NEVER commit anything in here)
+SECRETS/keys/*.json
+SECRETS/keys/*.env
+SECRETS/keys/*.txt
+SECRETS/keys/**
+!SECRETS/keys/.gitkeep
+!SECRETS/keys/README.md
+SECRETS/service_accounts/*.json
+SECRETS/service_accounts/**
+!SECRETS/service_accounts/.gitkeep
+!SECRETS/service_accounts/README.md
+**/naya_raw_dump*
+**/credentials*.json
+**/service_account*.json
+**/*_token.json
+**/*_oauth*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Database & runtime data
+data/db/*.db
+data/db/*.db-shm
+data/db/*.db-wal
+*.sqlite
+*.sqlite3
+data/validation/*.json
+data/real_sales/*.json
+data/pain_state/*.json
+
+# Cache & runtime state
+data/cache/
+*.cache
+.cache/
+naya_state.json
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Test artifacts
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+*.cover
+pytest_*.txt
+pytest_*.log
+
+# Audit artifacts (jamais en repo)
+audit_*.json
+audit_*.txt
+audit_*.log
+output*.json
+output*.txt
+out.txt
+p[0-9]*.json
+p[0-9]*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+docker-compose.override.yml
+
+# Node (NAYA_INTERFACE / TORI_APP)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Build outputs
+*.tar.gz
+*.zip
+*.tgz

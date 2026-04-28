@@ -1,0 +1,4 @@
+"""PROJECT_06 — Acquisition Immobilière PAINs Registry."""
+PAIN_IDS = ["PAIN_01_UNDERVALUED_PROPERTY", "PAIN_02_LIQUIDITY_NEED_SELLER",
+            "PAIN_03_COMPLEX_ESTIMATION"]
+__all__ = ["PAIN_IDS"]

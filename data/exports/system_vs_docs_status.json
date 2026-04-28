@@ -1,0 +1,32 @@
+{
+    "compile_errors": 0,
+    "pytest": {
+        "collected": 840,
+        "errors": 1
+    },
+    "architecture": {
+        "packages": {
+            "agents": true,
+            "workflows": true,
+            "memory": true,
+            "core": true
+        },
+        "agents_count": 13,
+        "core_modules_count": 43
+    },
+    "docs": {
+        "high_promise_count": 16,
+        "top10": [
+            "PRODUCTION_READINESS_REPORT.md",
+            "SESSION_MANIFEST.md",
+            "deploy.sh",
+            "scripts/deploy_render.sh",
+            "VALIDATION_SESSION_2026-04-16.md",
+            "NAYA_V19_COMPLETION_REPORT.md",
+            "docs/DEPLOYMENT_VALIDATION_GUIDE.md",
+            "CLAUDE CODE/CLAUDE.md",
+            "CRITICAL_DEDUPLICATION_PLAN.md",
+            "DEPLOYMENT_VALIDATION_SUMMARY.md"
+        ]
+    }
+}

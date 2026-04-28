@@ -1,0 +1,365 @@
+version: '3.9'
+
+services:
+  # ==================== POSTGRESQL DATABASE ====================
+  postgres:
+    image: postgres:15-alpine
+    container_name: naya-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME:-naya_prod}
+      POSTGRES_USER: ${DB_USER:-naya_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-naya_secure_2024}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - naya_postgres_data:/var/lib/postgresql/data
+      - ./PERSISTENCE/database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-naya_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - naya_network
+    restart: unless-stopped
+    command: postgres -c max_connections=100 -c shared_buffers=256MB
+
+  # ==================== REDIS CACHE ====================
+  redis:
+    image: redis:7-alpine
+    container_name: naya-redis
+    command: >
+      redis-server 
+      --requirepass ${REDIS_PASSWORD:-naya_redis_2024}
+      --maxmemory 1gb
+      --maxmemory-policy allkeys-lru
+      --appendonly yes
+      --appendfilename "appendonly.aof"
+    ports:
+      - "6379:6379"
+    volumes:
+      - naya_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-naya_redis_2024}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== QDRANT VECTOR DB ====================
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: naya-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    environment:
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-qdrant_secure_key_2024}
+    volumes:
+      - naya_qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== RABBITMQ MESSAGE BROKER ====================
+  rabbitmq:
+    image: rabbitmq:3.12-management-alpine
+    container_name: naya-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-naya_user}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-naya_rabbitmq_2024}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - naya_rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== PROMETHEUS METRICS ====================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: naya-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - naya_prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== GRAFANA DASHBOARDS ====================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: naya-grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin_naya_2024}
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_INSTALL_PLUGINS: grafana-piechart-panel
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+    ports:
+      - "3000:3000"
+    volumes:
+      - naya_grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+    depends_on:
+      - prometheus
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== ELASTICSEARCH LOGS ====================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+    container_name: naya-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - logger.level=WARN
+    ports:
+      - "9200:9200"
+    volumes:
+      - naya_elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== KIBANA VISUALIZATION ====================
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.10.0
+    container_name: naya-kibana
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      KIBANA_DEFAULTAPPID: discover
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== MAIN API SERVICE ====================
+  naya-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: "3.11"
+    container_name: naya-api
+    environment:
+      # ===== DATABASE =====
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-naya_prod}
+      DB_USER: ${DB_USER:-naya_user}
+      DB_PASSWORD: ${DB_PASSWORD:-naya_secure_2024}
+      DB_POOL_SIZE: 20
+      DB_MAX_OVERFLOW: 40
+
+      # ===== REDIS =====
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-naya_redis_2024}
+      REDIS_DB: 0
+      CACHE_TTL: 3600
+
+      # ===== VECTOR DB =====
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+      QDRANT_API_KEY: ${QDRANT_API_KEY:-qdrant_secure_key_2024}
+
+      # ===== MESSAGE BROKER =====
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: ${RABBITMQ_USER:-naya_user}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD:-naya_rabbitmq_2024}
+
+      # ===== API CONFIG =====
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      API_WORKERS: 4
+      DEBUG: ${DEBUG:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+      # ===== SECURITY =====
+      SECRET_KEY: ${SECRET_KEY:-change_this_in_production_2024}
+      JWT_SECRET: ${JWT_SECRET:-jwt_secret_key_2024}
+      JWT_ALGORITHM: HS256
+      JWT_EXPIRATION_HOURS: 24
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:-encryption_key_2024}
+
+      # ===== EXTERNAL APIS =====
+      SERPER_API_KEY: ${SERPER_API_KEY:-}
+      APOLLO_API_KEY: ${APOLLO_API_KEY:-}
+      HUNTER_API_KEY: ${HUNTER_API_KEY:-}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY:-}
+      STRIPE_API_KEY: ${STRIPE_API_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+
+      # ===== PAYMENT STREAMS =====
+      ALBY_API_KEY: ${ALBY_API_KEY:-}
+      LND_HOST: ${LND_HOST:-localhost:8080}
+      PAYPAL_CLIENT_ID: ${PAYPAL_CLIENT_ID:-}
+      PAYPAL_CLIENT_SECRET: ${PAYPAL_CLIENT_SECRET:-}
+
+      # ===== MONITORING =====
+      SENTRY_DSN: ${SENTRY_DSN:-}
+      PROMETHEUS_PORT: 8001
+      ENABLE_METRICS: 'true'
+
+      # ===== FEATURES =====
+      ENABLE_VECTOR_MEMORY: 'true'
+      ENABLE_SELF_HEALING: 'true'
+      ENABLE_FEEDBACK_LOOP: 'true'
+      ENABLE_LIGHTNING_PAYMENTS: 'true'
+      ENABLE_SUBSCRIPTIONS: 'true'
+
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    volumes:
+      - ./NAYA_CORE:/app/NAYA_CORE
+      - ./NAYA_DASHBOARD:/app/NAYA_DASHBOARD
+      - ./NAYA_INTERFACE:/app/NAYA_INTERFACE
+      - ./NAYA_ORCHESTRATION:/app/NAYA_ORCHESTRATION
+      - ./NAYA_REVENUE_ENGINE:/app/NAYA_REVENUE_ENGINE
+      - ./PERSISTENCE:/app/PERSISTENCE
+      - ./logs:/app/logs
+      - ./data/cache:/app/data/cache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - naya_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 15s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # ==================== CELERY WORKER ====================
+  celery-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: naya-celery-worker
+    command: >
+      celery -A NAYA_CORE.orchestration.celery_app worker
+      --loglevel=info
+      --concurrency=4
+      --max-tasks-per-child=1000
+      --time-limit=3600
+    environment:
+      CELERY_BROKER_URL: amqp://${RABBITMQ_USER:-naya_user}:${RABBITMQ_PASSWORD:-naya_rabbitmq_2024}@rabbitmq:5672//
+      CELERY_RESULT_BACKEND: redis://:${REDIS_PASSWORD:-naya_redis_2024}@redis:6379/1
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-naya_prod}
+      DB_USER: ${DB_USER:-naya_user}
+      DB_PASSWORD: ${DB_PASSWORD:-naya_secure_2024}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-naya_redis_2024}
+      LOG_LEVEL: INFO
+    depends_on:
+      - rabbitmq
+      - redis
+      - postgres
+    volumes:
+      - ./NAYA_CORE:/app/NAYA_CORE
+      - ./NAYA_ORCHESTRATION:/app/NAYA_ORCHESTRATION
+      - ./logs:/app/logs
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+  # ==================== CELERY BEAT SCHEDULER ====================
+  celery-beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: naya-celery-beat
+    command: >
+      celery -A NAYA_CORE.orchestration.celery_app beat
+      --loglevel=info
+      --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    environment:
+      CELERY_BROKER_URL: amqp://${RABBITMQ_USER:-naya_user}:${RABBITMQ_PASSWORD:-naya_rabbitmq_2024}@rabbitmq:5672//
+      CELERY_RESULT_BACKEND: redis://:${REDIS_PASSWORD:-naya_redis_2024}@redis:6379/1
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-naya_prod}
+      DB_USER: ${DB_USER:-naya_user}
+      DB_PASSWORD: ${DB_PASSWORD:-naya_secure_2024}
+      LOG_LEVEL: INFO
+    depends_on:
+      - rabbitmq
+      - redis
+      - postgres
+    volumes:
+      - ./NAYA_CORE:/app/NAYA_CORE
+      - ./logs:/app/logs
+    networks:
+      - naya_network
+    restart: unless-stopped
+
+volumes:
+  naya_postgres_data:
+    driver: local
+  naya_redis_data:
+    driver: local
+  naya_qdrant_data:
+    driver: local
+  naya_rabbitmq_data:
+    driver: local
+  naya_prometheus_data:
+    driver: local
+  naya_grafana_data:
+    driver: local
+  naya_elasticsearch_data:
+    driver: local
+
+networks:
+  naya_network:
+    driver: bridge
