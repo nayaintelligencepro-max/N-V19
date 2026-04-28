@@ -43,7 +43,16 @@ class ConstraintValidator:
         self.logger = logging.getLogger(__name__)
         self.constraints: Dict[str, Constraint] = {}
         self.violations: List[Dict] = []
+        self._telegram = self._init_telegram()
         self._register_constraints()
+
+    def _init_telegram(self):
+        """Initialise le notificateur Telegram (optionnel, ne lève jamais d'exception)."""
+        try:
+            from NAYA_CORE.integrations.telegram_notifier import TelegramNotifier
+            return TelegramNotifier()
+        except Exception:
+            return None
 
     def _register_constraints(self) -> None:
         """Enregistre toutes les contraintes"""
@@ -286,14 +295,13 @@ class ConstraintValidator:
         elif constraint.level == ConstraintLevel.HIGH:
             self.logger.error(f"HIGH VIOLATION: {constraint.name}")
             try:
-                from NAYA_CORE.integrations.telegram_notifier import TelegramNotifier
-                notifier = TelegramNotifier()
-                notifier.alert_system(
-                    f"⚠️ VIOLATION HIGH: {constraint.name}\n"
-                    f"→ {constraint.error_message}\n"
-                    f"Remédiation: {'; '.join(constraint.remediation_steps[:2])}",
-                    level="HIGH"
-                )
+                if self._telegram is not None:
+                    self._telegram.alert_system(
+                        f"⚠️ VIOLATION HIGH: {constraint.name}\n"
+                        f"→ {constraint.error_message}\n"
+                        f"Remédiation: {'; '.join(constraint.remediation_steps[:2])}",
+                        level="HIGH"
+                    )
             except Exception as e:
                 self.logger.warning(f"Telegram alert failed for HIGH violation: {e}")
 
