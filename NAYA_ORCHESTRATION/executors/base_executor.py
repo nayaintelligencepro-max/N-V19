@@ -4,7 +4,7 @@ Base Executor Interface for NAYA
 Defines the contract for all executors (CloudRun, VM, Local, Kubernetes, etc)
 """
 
-from abc import ABC, abstractmethod
+from abc import ABC
 from typing import Dict, Any
 
 
@@ -12,7 +12,7 @@ class BaseExecutor(ABC):
     """
     Abstract base class for all task executors.
 
-    Implementations must provide:
+    Implementations should override:
     - execute(): Run a task and return result
     - validate(): Verify executor prerequisites
     - health_check(): Verify executor is ready
@@ -22,7 +22,6 @@ class BaseExecutor(ABC):
         self.name: str = "BaseExecutor"
         self.is_ready: bool = False
 
-    @abstractmethod
     def execute(self, task: Dict[str, Any]) -> Dict[str, Any]:
         """
         Execute a task and return results.

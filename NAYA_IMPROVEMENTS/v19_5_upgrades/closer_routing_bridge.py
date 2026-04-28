@@ -17,6 +17,7 @@ FLUX : OutreachSequenceEngine → CloserRoutingBridge → CloserAgent
 from __future__ import annotations
 
 import logging
+import os
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
@@ -76,11 +77,12 @@ SIGNAL_STRATEGY_MAP = {
     ConversionSignal.REFERRAL_RECEIVED: ClosingStrategy.TRIAL_OFFER,
 }
 
-PAYMENT_LINKS = {
-    "deblock": "https://deblock.com/a-ftp860",
-    "paypal": "https://www.paypal.me/Myking987",
-    "revolut": "revolut.me/kayeleem",
-}
+def _get_payment_links() -> Dict[str, str]:
+    return {
+        "deblock": os.environ.get("DEBLOCK_PAYMENT_URL", "https://deblock.com/a-ftp860"),
+        "paypal": os.environ.get("PAYPAL_ME_URL", "https://www.paypal.me/Myking987"),
+        "revolut": os.environ.get("REVOLUT_ME_URL", "revolut.me/kayeleem"),
+    }
 
 SERVICE_BASE_PRICES = {
     "audit_iec62443": 8000,
@@ -194,8 +196,8 @@ class CloserRoutingBridge:
 
     def _generate_payment_link(self, amount: float) -> str:
         if amount >= 5000:
-            return PAYMENT_LINKS["deblock"]
-        return PAYMENT_LINKS["paypal"]
+            return _get_payment_links()["deblock"]
+        return _get_payment_links()["paypal"]
 
     def _determine_contract_type(self, event: ConversionEvent) -> str:
         if any(s.startswith("monitoring") for s in event.services_interested):

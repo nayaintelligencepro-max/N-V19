@@ -59,7 +59,6 @@ CRITICAL_DIRS = [
     "NAYA_CORE",
     "NAYA_IMPROVEMENTS",
     "CONSTITUTION",
-    "SECRETS",
 ]
 
 
@@ -98,6 +97,19 @@ class BackupEngine:
                 total_size += size
                 files_backed += 1
                 checksums.append(self._file_checksum(src))
+
+        for rel_dir in CRITICAL_DIRS:
+            src_dir = project_root / rel_dir
+            if src_dir.is_dir():
+                for py_file in src_dir.rglob("*.py"):
+                    rel = py_file.relative_to(project_root)
+                    dst = backup_dir / rel
+                    dst.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(str(py_file), str(dst))
+                    size = py_file.stat().st_size
+                    total_size += size
+                    files_backed += 1
+                    checksums.append(self._file_checksum(py_file))
 
         manifest = {
             "backup_id": backup_id,

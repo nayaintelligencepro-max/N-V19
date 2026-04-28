@@ -17,6 +17,7 @@ Impact : Rétention +40%, upsell facilité.
 from __future__ import annotations
 
 import logging
+import os
 import secrets
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
@@ -94,10 +95,11 @@ class TimelineEvent:
     status: str
 
 
-PAYMENT_LINKS = {
-    "deblock": "https://deblock.com/a-ftp860",
-    "paypal": "https://www.paypal.me/Myking987",
-}
+def _get_payment_links() -> Dict[str, str]:
+    return {
+        "deblock": os.environ.get("DEBLOCK_PAYMENT_URL", "https://deblock.com/a-ftp860"),
+        "paypal": os.environ.get("PAYPAL_ME_URL", "https://www.paypal.me/Myking987"),
+    }
 
 
 class ClientPortalAPI:
@@ -229,7 +231,7 @@ class ClientPortalAPI:
         }
 
     def get_renewal_link(self, client_id: str) -> str:
-        return PAYMENT_LINKS["deblock"]
+        return _get_payment_links()["deblock"]
 
     def get_stats(self) -> Dict[str, Any]:
         return {
