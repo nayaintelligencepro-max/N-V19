@@ -1,0 +1,50 @@
+{
+  "energie_utilities": {
+    "sector": "energie_utilities",
+    "winning_patterns": [
+      "notre (×32)",
+      "audit (×32)",
+      "62443 (×32)",
+      "garantit (×32)",
+      "conformité (×32)",
+      "jours (×32)"
+    ],
+    "losing_patterns": [],
+    "optimal_price_range": [
+      15000,
+      15000
+    ],
+    "best_opening_phrases": [
+      "Notre audit IEC 62443 garantit la conformité NIS2 en 90 jours"
+    ],
+    "best_cta": "Disponible pour un appel de 30 min ?",
+    "avg_conversion_rate": 100.0,
+    "sample_size": 16,
+    "updated_at": "2026-04-21T06:09:20.766010"
+  },
+  "transport_logistique": {
+    "sector": "transport_logistique",
+    "winning_patterns": [
+      "notre (×32)",
+      "audit (×32)",
+      "62443 (×32)",
+      "certifié (×32)",
+      "garantit (×32)",
+      "conformité (×32)",
+      "confirmé (×32)"
+    ],
+    "losing_patterns": [],
+    "optimal_price_range": [
+      20000,
+      20000
+    ],
+    "best_opening_phrases": [
+      "Notre audit IEC 62443 certifié garantit conformité NIS2",
+      "ROI confirmé en 6 mois"
+    ],
+    "best_cta": "Disponible pour un appel de 30 min ?",
+    "avg_conversion_rate": 100.0,
+    "sample_size": 16,
+    "updated_at": "2026-04-21T06:09:20.777331"
+  }
+}

@@ -1,0 +1,85 @@
+# ==========================================
+# NAYA SUPREME V19 — Render Deployment
+# render.yaml — Web Service + Worker
+# ==========================================
+
+services:
+  # ── API Backend ───────────────────────────────────────────────
+  - type: web
+    name: naya-supreme-api
+    env: python
+    region: frankfurt
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: uvicorn NAYA_CORE.api.main:app --host 0.0.0.0 --port $PORT --workers 2
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: NAYA_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: PORT
+        value: "10000"
+      - key: API_WORKERS
+        value: "2"
+      - key: ENABLE_SELF_HEALING
+        value: "true"
+      - key: ENABLE_GUARDIAN
+        value: "true"
+      - key: NAYA_AUTO_OUTREACH
+        value: "false"
+      # Secrets — à configurer dans le dashboard Render
+      - key: SECRET_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: STRIPE_API_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: SERPER_API_KEY
+        sync: false
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: naya-redis
+          property: connectionString
+
+  # ── Celery Worker ─────────────────────────────────────────────
+  - type: worker
+    name: naya-worker
+    env: python
+    region: frankfurt
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: celery -A ASYNC.celery_tasks worker --loglevel=info --concurrency=2
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: naya-redis
+          property: connectionString
+
+  # ── Redis ─────────────────────────────────────────────────────
+  - type: redis
+    name: naya-redis
+    region: frankfurt
+    plan: starter
+    maxmemoryPolicy: allkeys-lru

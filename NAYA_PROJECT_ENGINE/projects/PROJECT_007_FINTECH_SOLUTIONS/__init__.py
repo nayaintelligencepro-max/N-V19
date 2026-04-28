@@ -1,0 +1,2 @@
+"""Project PROJECT_007_FINTECH_SOLUTIONS"""
+status = "ACTIVE"
