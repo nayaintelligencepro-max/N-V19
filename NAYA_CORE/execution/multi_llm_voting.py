@@ -122,6 +122,7 @@ class MultiLLMVotingEngine:
                        params: Dict) -> VoteResult:
         """Appelle un provider et retourne le résultat."""
         start = time.time()
+        err_msg = "failed"
         try:
             result = provider.execute(prompt, params)
             latency = (time.time() - start) * 1000
@@ -133,9 +134,10 @@ class MultiLLMVotingEngine:
                     tokens=result.get("tokens_used", 0),
                     latency_ms=latency,
                 )
-        except Exception as e:
-            log.debug(f"[VotingEngine] {name}: {e}")
-        return VoteResult(text="", provider=name, error=str(e) if 'e' in dir() else "failed")
+        except Exception as exc:
+            err_msg = str(exc)
+            log.debug(f"[VotingEngine] {name}: {exc}")
+        return VoteResult(text="", provider=name, error=err_msg)
 
     def run(self, prompt: str, params: Dict = None, n_providers: int = 3) -> VoteResult:
         """
