@@ -6,7 +6,7 @@ Enterprise-grade security without compromising speed
 
 import os, json, logging, hashlib, secrets
 from datetime import datetime, timedelta, timezone
-from typing import Optional, Dict, List, Any
+from typing import Optional, Dict, List, Any, Tuple
 from enum import Enum
 import jwt
 from functools import wraps

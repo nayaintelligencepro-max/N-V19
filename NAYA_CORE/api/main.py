@@ -61,14 +61,14 @@ async def lifespan(application: FastAPI):
 
     yield  # ── Application running ──
 
-    log.info("🛑  NAYA SUPREME V19 — arrêt API")
+    log.info("🛑  NAYA SUPREME V19.3 — arrêt API")
 
 
 # ── Application ───────────────────────────────────────────────────────────────
 app = FastAPI(
-    title="NAYA SUPREME V21",
+    title="NAYA SUPREME V19.3",
     description="Système IA autonome de génération de revenue — 11 agents | SaaS NIS2 | Pipeline < 4h",
-    version="21.0.0",
+    version="19.3.0",
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan,

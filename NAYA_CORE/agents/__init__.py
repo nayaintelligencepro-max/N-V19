@@ -1,6 +1,6 @@
 """
 NAYA CORE — Agent Module
-Tous les agents autonomes IA pour NAYA SUPREME V19.2
+Tous les agents autonomes IA pour NAYA SUPREME V19.3
 
 11 AGENTS AUTONOMES:
 1. pain_hunter - Détection douleurs marché
@@ -16,7 +16,7 @@ Tous les agents autonomes IA pour NAYA SUPREME V19.2
 11. guardian_security - Sécurité / scan / réparation
 """
 
-__version__ = "19.2.0"
+__version__ = "19.3.0"
 
 __all__ = [
     # Agent 1 - Pain Hunter
