@@ -750,5 +750,99 @@
       "ROI confirmé en 6 mois"
     ],
     "created_at": "2026-04-21T06:09:20.775824"
+  },
+  {
+    "example_id": "34cdac04-b4cf-4948-a7dd-e2c6a83c7830",
+    "company": "WinCorp",
+    "sector": "energie_utilities",
+    "pain_description": "NIS2 audit needed Q2",
+    "offer_text": "Notre audit IEC 62443 garantit la conformité NIS2 en 90 jours. ROI certifié.",
+    "price_eur": 15000,
+    "converted": true,
+    "conversion_value_eur": 15000,
+    "time_to_close_days": 7,
+    "objections_handled": [],
+    "winning_phrases": [
+      "Notre audit IEC 62443 garantit la conformité NIS2 en 90 jours"
+    ],
+    "created_at": "2026-04-28T13:07:54.086132"
+  },
+  {
+    "example_id": "3e55deda-dbce-4ee6-8845-d05849c10299",
+    "company": "LossCorp",
+    "sector": "manufacturing",
+    "pain_description": "Budget constraints",
+    "offer_text": "Generic offer",
+    "price_eur": 5000,
+    "converted": false,
+    "conversion_value_eur": 0,
+    "time_to_close_days": 0,
+    "objections_handled": [],
+    "winning_phrases": [],
+    "created_at": "2026-04-28T13:07:54.088185"
+  },
+  {
+    "example_id": "413d4363-5d1a-44a6-85e4-f602bf111d86",
+    "company": "PhraseCorp",
+    "sector": "transport_logistique",
+    "pain_description": "SCADA vulnerabilities",
+    "offer_text": "Notre audit IEC 62443 certifié garantit conformité NIS2. ROI confirmé en 6 mois.",
+    "price_eur": 20000,
+    "converted": true,
+    "conversion_value_eur": 20000,
+    "time_to_close_days": 5,
+    "objections_handled": [],
+    "winning_phrases": [
+      "Notre audit IEC 62443 certifié garantit conformité NIS2",
+      "ROI confirmé en 6 mois"
+    ],
+    "created_at": "2026-04-28T13:07:54.091277"
+  },
+  {
+    "example_id": "55ed8d8f-4abc-448f-a269-1561fe5235ed",
+    "company": "WinCorp",
+    "sector": "energie_utilities",
+    "pain_description": "NIS2 audit needed Q2",
+    "offer_text": "Notre audit IEC 62443 garantit la conformité NIS2 en 90 jours. ROI certifié.",
+    "price_eur": 15000,
+    "converted": true,
+    "conversion_value_eur": 15000,
+    "time_to_close_days": 7,
+    "objections_handled": [],
+    "winning_phrases": [
+      "Notre audit IEC 62443 garantit la conformité NIS2 en 90 jours"
+    ],
+    "created_at": "2026-04-28T13:08:15.880214"
+  },
+  {
+    "example_id": "93b973df-08a7-4d14-b590-5bef4f37a2e8",
+    "company": "LossCorp",
+    "sector": "manufacturing",
+    "pain_description": "Budget constraints",
+    "offer_text": "Generic offer",
+    "price_eur": 5000,
+    "converted": false,
+    "conversion_value_eur": 0,
+    "time_to_close_days": 0,
+    "objections_handled": [],
+    "winning_phrases": [],
+    "created_at": "2026-04-28T13:08:15.882383"
+  },
+  {
+    "example_id": "9e1d06cf-0fdc-4aed-9876-442776c858d1",
+    "company": "PhraseCorp",
+    "sector": "transport_logistique",
+    "pain_description": "SCADA vulnerabilities",
+    "offer_text": "Notre audit IEC 62443 certifié garantit conformité NIS2. ROI confirmé en 6 mois.",
+    "price_eur": 20000,
+    "converted": true,
+    "conversion_value_eur": 20000,
+    "time_to_close_days": 5,
+    "objections_handled": [],
+    "winning_phrases": [
+      "Notre audit IEC 62443 certifié garantit conformité NIS2",
+      "ROI confirmé en 6 mois"
+    ],
+    "created_at": "2026-04-28T13:08:15.885598"
   }
 ]

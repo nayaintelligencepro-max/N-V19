@@ -17166,5 +17166,2151 @@
     "estimated_remediation_eur": 565000,
     "upsell_proposal": "Proposition pour PartialCorp: Pack Mise en Conformité — 188,333 EUR. Score actuel 40% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
     "created_at": "2026-04-21T06:09:20.599277"
+  },
+  "200c9072-65c8-43bb-8747-ae336780226e": {
+    "report_id": "200c9072-65c8-43bb-8747-ae336780226e",
+    "company": "TestEnergy",
+    "sector": "energie_utilities",
+    "contact_email": "test@energy.fr",
+    "compliance_scores": {
+      "SL1": 100,
+      "SL2": 100,
+      "SL3": 100,
+      "SL4": 100
+    },
+    "overall_score": 100,
+    "gaps": [],
+    "roadmap": [],
+    "estimated_remediation_eur": 0,
+    "upsell_proposal": "Proposition pour TestEnergy: Pack Maintenance & Surveillance — 8,000 EUR. Score actuel 100% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:53.916017"
+  },
+  "662e5d65-4dc9-489b-be4e-8d8dda3f4461": {
+    "report_id": "662e5d65-4dc9-489b-be4e-8d8dda3f4461",
+    "company": "GapCorp",
+    "sector": "manufacturing",
+    "contact_email": "gap@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour GapCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:53.935070"
+  },
+  "7007ce7b-f766-4224-9edb-eb90361a62f8": {
+    "report_id": "7007ce7b-f766-4224-9edb-eb90361a62f8",
+    "company": "RoadmapCorp",
+    "sector": "transport_logistique",
+    "contact_email": "test@corp.fr",
+    "compliance_scores": {
+      "SL1": 8,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 3,
+    "gaps": [
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 581000,
+    "upsell_proposal": "Proposition pour RoadmapCorp: Pack Remédiation Complète — 290,500 EUR. Score actuel 3% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:53.980761"
+  },
+  "697429c3-d770-452d-8771-b5a8ee7f98df": {
+    "report_id": "697429c3-d770-452d-8771-b5a8ee7f98df",
+    "company": "UpsellCorp",
+    "sector": "iec62443",
+    "contact_email": "u@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour UpsellCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:53.999443"
+  },
+  "6f0ebcd7-dfb2-41e8-a515-2810859d28bf": {
+    "report_id": "6f0ebcd7-dfb2-41e8-a515-2810859d28bf",
+    "company": "CostCorp",
+    "sector": "manufacturing",
+    "contact_email": "c@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour CostCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:54.018306"
+  },
+  "621aa8e9-3527-4992-982f-4cfbf418176f": {
+    "report_id": "621aa8e9-3527-4992-982f-4cfbf418176f",
+    "company": "PartialCorp",
+    "sector": "energie_utilities",
+    "contact_email": "p@corp.fr",
+    "compliance_scores": {
+      "SL1": 100,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 40,
+    "gaps": [
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum"
+    ],
+    "estimated_remediation_eur": 565000,
+    "upsell_proposal": "Proposition pour PartialCorp: Pack Mise en Conformité — 188,333 EUR. Score actuel 40% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:07:54.037116"
+  },
+  "13c6fd3c-9c47-457f-a0ea-56616ce4d8d9": {
+    "report_id": "13c6fd3c-9c47-457f-a0ea-56616ce4d8d9",
+    "company": "TestEnergy",
+    "sector": "energie_utilities",
+    "contact_email": "test@energy.fr",
+    "compliance_scores": {
+      "SL1": 100,
+      "SL2": 100,
+      "SL3": 100,
+      "SL4": 100
+    },
+    "overall_score": 100,
+    "gaps": [],
+    "roadmap": [],
+    "estimated_remediation_eur": 0,
+    "upsell_proposal": "Proposition pour TestEnergy: Pack Maintenance & Surveillance — 8,000 EUR. Score actuel 100% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.708322"
+  },
+  "ed22e2b5-e643-44e9-a301-6298ff88d67c": {
+    "report_id": "ed22e2b5-e643-44e9-a301-6298ff88d67c",
+    "company": "GapCorp",
+    "sector": "manufacturing",
+    "contact_email": "gap@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour GapCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.756447"
+  },
+  "5bea8232-4631-4a07-a2e8-36225545cd14": {
+    "report_id": "5bea8232-4631-4a07-a2e8-36225545cd14",
+    "company": "RoadmapCorp",
+    "sector": "transport_logistique",
+    "contact_email": "test@corp.fr",
+    "compliance_scores": {
+      "SL1": 8,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 3,
+    "gaps": [
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 581000,
+    "upsell_proposal": "Proposition pour RoadmapCorp: Pack Remédiation Complète — 290,500 EUR. Score actuel 3% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.775414"
+  },
+  "5c322d70-61c7-47fe-9864-47653b3e7e90": {
+    "report_id": "5c322d70-61c7-47fe-9864-47653b3e7e90",
+    "company": "UpsellCorp",
+    "sector": "iec62443",
+    "contact_email": "u@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour UpsellCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.794667"
+  },
+  "79d87ccd-42c6-4fcc-a649-25105cba50cf": {
+    "report_id": "79d87ccd-42c6-4fcc-a649-25105cba50cf",
+    "company": "CostCorp",
+    "sector": "manufacturing",
+    "contact_email": "c@corp.fr",
+    "compliance_scores": {
+      "SL1": 0,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 0,
+    "gaps": [
+      {
+        "gap_id": "SL1-01",
+        "level": "SL1",
+        "requirement": "Identification et authentification des utilisateurs humains",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Identification et authentification des utilisateurs humains — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-02",
+        "level": "SL1",
+        "requirement": "Gestion des comptes et droits d'accès",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Gestion des comptes et droits d'accès — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-03",
+        "level": "SL1",
+        "requirement": "Protection des communications (chiffrement basique)",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Protection des communications (chiffrement basique) — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-04",
+        "level": "SL1",
+        "requirement": "Journalisation des événements de sécurité",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Journalisation des événements de sécurité — niveau SL1"
+      },
+      {
+        "gap_id": "SL1-05",
+        "level": "SL1",
+        "requirement": "Sauvegardes régulières avec tests de restauration",
+        "status": "missing",
+        "priority": "low",
+        "remediation_cost_eur": 4000,
+        "remediation_weeks": 2,
+        "guidance": "Implémenter Sauvegardes régulières avec tests de restauration — niveau SL1"
+      },
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum | SL1-01:Identification et authentification des u | SL1-02:Gestion des comptes et droits d'accès | SL1-03:Protection des communications (chiffreme | SL1-04:Journalisation des événements de sécurit | SL1-05:Sauvegardes régulières avec tests de res"
+    ],
+    "estimated_remediation_eur": 585000,
+    "upsell_proposal": "Proposition pour CostCorp: Pack Remédiation Complète — 292,500 EUR. Score actuel 0% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.814092"
+  },
+  "56534df8-0550-485b-9a26-a144377102d4": {
+    "report_id": "56534df8-0550-485b-9a26-a144377102d4",
+    "company": "PartialCorp",
+    "sector": "energie_utilities",
+    "contact_email": "p@corp.fr",
+    "compliance_scores": {
+      "SL1": 100,
+      "SL2": 0,
+      "SL3": 0,
+      "SL4": 0
+    },
+    "overall_score": 40,
+    "gaps": [
+      {
+        "gap_id": "SL2-01",
+        "level": "SL2",
+        "requirement": "Authentification multi-facteurs pour accès privilégiés",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Authentification multi-facteurs pour accès privilégiés — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-02",
+        "level": "SL2",
+        "requirement": "Segmentation réseau OT/IT avec firewall industriel",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Segmentation réseau OT/IT avec firewall industriel — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-03",
+        "level": "SL2",
+        "requirement": "Détection des intrusions (IDS/IPS) sur réseau OT",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Détection des intrusions (IDS/IPS) sur réseau OT — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-04",
+        "level": "SL2",
+        "requirement": "Gestion des correctifs avec fenêtres de maintenance",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Gestion des correctifs avec fenêtres de maintenance — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-05",
+        "level": "SL2",
+        "requirement": "Contrôle de l'intégrité des logiciels et firmware",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Contrôle de l'intégrité des logiciels et firmware — niveau SL2"
+      },
+      {
+        "gap_id": "SL2-06",
+        "level": "SL2",
+        "requirement": "Protocole de réponse aux incidents documenté et testé",
+        "status": "missing",
+        "priority": "high",
+        "remediation_cost_eur": 10000,
+        "remediation_weeks": 4,
+        "guidance": "Implémenter Protocole de réponse aux incidents documenté et testé — niveau SL2"
+      },
+      {
+        "gap_id": "SL3-01",
+        "level": "SL3",
+        "requirement": "Zero-trust architecture pour accès OT",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Zero-trust architecture pour accès OT — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-02",
+        "level": "SL3",
+        "requirement": "Surveillance comportementale (SIEM/SOC OT)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Surveillance comportementale (SIEM/SOC OT) — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-03",
+        "level": "SL3",
+        "requirement": "Analyse de vulnérabilités automatisée des composants SCADA",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Analyse de vulnérabilités automatisée des composants SCADA — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-04",
+        "level": "SL3",
+        "requirement": "Plan de continuité OT avec RTO < 4h",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Plan de continuité OT avec RTO < 4h — niveau SL3"
+      },
+      {
+        "gap_id": "SL3-05",
+        "level": "SL3",
+        "requirement": "Audit externe IEC 62443 par organisme accrédité",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 36000,
+        "remediation_weeks": 8,
+        "guidance": "Implémenter Audit externe IEC 62443 par organisme accrédité — niveau SL3"
+      },
+      {
+        "gap_id": "SL4-01",
+        "level": "SL4",
+        "requirement": "Isolation physique et logique des systèmes critiques (air-gap)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 100000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Isolation physique et logique des systèmes critiques (air-gap) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-02",
+        "level": "SL4",
+        "requirement": "Cryptographie avancée (post-quantique recommandée)",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Cryptographie avancée (post-quantique recommandée) — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-03",
+        "level": "SL4",
+        "requirement": "Red team OT spécialisé tous les 6 mois",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Red team OT spécialisé tous les 6 mois — niveau SL4"
+      },
+      {
+        "gap_id": "SL4-04",
+        "level": "SL4",
+        "requirement": "Résilience multi-sites avec basculement automatique",
+        "status": "missing",
+        "priority": "critical",
+        "remediation_cost_eur": 75000,
+        "remediation_weeks": 16,
+        "guidance": "Implémenter Résilience multi-sites avec basculement automatique — niveau SL4"
+      }
+    ],
+    "roadmap": [
+      "PHASE 1: SL3-01:Zero-trust architecture pour accès OT | SL3-02:Surveillance comportementale (SIEM/SOC O | SL3-03:Analyse de vulnérabilités automatisée de",
+      "PHASE 2: SL3-04:Plan de continuité OT avec RTO < 4h | SL3-05:Audit externe IEC 62443 par organisme ac | SL4-01:Isolation physique et logique des systèm | SL4-02:Cryptographie avancée (post-quantique re | SL4-03:Red team OT spécialisé tous les 6 mois",
+      "PHASE 3: SL4-04:Résilience multi-sites avec basculement  | SL2-01:Authentification multi-facteurs pour acc | SL2-02:Segmentation réseau OT/IT avec firewall  | SL2-03:Détection des intrusions (IDS/IPS) sur r | SL2-04:Gestion des correctifs avec fenêtres de  | SL2-05:Contrôle de l'intégrité des logiciels et | SL2-06:Protocole de réponse aux incidents docum"
+    ],
+    "estimated_remediation_eur": 565000,
+    "upsell_proposal": "Proposition pour PartialCorp: Pack Mise en Conformité — 188,333 EUR. Score actuel 40% → cible 90%+ en 6 mois. Contact NAYA pour devis personnalisé.",
+    "created_at": "2026-04-28T13:08:15.833566"
   }
 }

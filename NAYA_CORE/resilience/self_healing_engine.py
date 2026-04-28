@@ -432,7 +432,10 @@ class SelfHealingEngine:
                 
                 # Retry failed jobs periodically
                 if self.dlq.failed_jobs:
-                    await self.dlq.retry_failed_jobs(lambda: None)
+                    async def _log_and_noop(fn_name: str, *args, **kwargs):
+                        log.warning(f"DLQ retry: no executor registered for '{fn_name}' — job remains in queue")
+
+                    await self.dlq.retry_failed_jobs(_log_and_noop)
                 
                 await asyncio.sleep(interval_seconds)
                 

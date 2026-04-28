@@ -448,5 +448,65 @@
     "payload": {},
     "status": "pending",
     "created_at": "2026-04-21T06:09:20.942162"
+  },
+  "7fc17647": {
+    "action_id": "7fc17647",
+    "action_type": "offer_send",
+    "description": "Envoyer offre 15k EUR à SNCF",
+    "amount_eur": 15000,
+    "payload": {
+      "company": "SNCF",
+      "price": 15000
+    },
+    "status": "approved",
+    "created_at": "2026-04-28T13:07:54.158813"
+  },
+  "1391fa98": {
+    "action_id": "1391fa98",
+    "action_type": "payment_send",
+    "description": "Paiement 5k EUR",
+    "amount_eur": 5000,
+    "payload": {},
+    "status": "vetoed",
+    "created_at": "2026-04-28T13:07:54.160647"
+  },
+  "c844f917": {
+    "action_id": "c844f917",
+    "action_type": "test",
+    "description": "Test action",
+    "amount_eur": 600,
+    "payload": {},
+    "status": "pending",
+    "created_at": "2026-04-28T13:07:54.163297"
+  },
+  "5af2f853": {
+    "action_id": "5af2f853",
+    "action_type": "offer_send",
+    "description": "Envoyer offre 15k EUR à SNCF",
+    "amount_eur": 15000,
+    "payload": {
+      "company": "SNCF",
+      "price": 15000
+    },
+    "status": "approved",
+    "created_at": "2026-04-28T13:08:15.921872"
+  },
+  "7899bd37": {
+    "action_id": "7899bd37",
+    "action_type": "payment_send",
+    "description": "Paiement 5k EUR",
+    "amount_eur": 5000,
+    "payload": {},
+    "status": "vetoed",
+    "created_at": "2026-04-28T13:08:15.923898"
+  },
+  "dfa62961": {
+    "action_id": "dfa62961",
+    "action_type": "test",
+    "description": "Test action",
+    "amount_eur": 600,
+    "payload": {},
+    "status": "pending",
+    "created_at": "2026-04-28T13:08:15.926748"
   }
 }

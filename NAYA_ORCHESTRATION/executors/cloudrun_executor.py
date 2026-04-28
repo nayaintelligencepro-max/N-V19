@@ -10,8 +10,10 @@ import json
 from typing import Dict, Any
 from datetime import datetime, timezone
 
+from .base_executor import BaseExecutor
 
-class CloudRunExecutor:
+
+class CloudRunExecutor(BaseExecutor):
     """
     Executes tasks on Google Cloud Run.
 
@@ -23,8 +25,11 @@ class CloudRunExecutor:
     """
 
     def __init__(self, project_id: str = None, region: str = "us-central1"):
+        super().__init__()
+        self.name = "CloudRunExecutor"
         self.project_id = project_id or os.environ.get("GCP_PROJECT_ID", "naya-project")
         self.region = region
+        self.is_ready = True
 
     def execute(self, task: Dict[str, Any]) -> Dict[str, Any]:
         """

@@ -9,8 +9,10 @@ import os
 from typing import Dict, Any
 from datetime import datetime, timezone
 
+from .base_executor import BaseExecutor
 
-class LocalExecutor:
+
+class LocalExecutor(BaseExecutor):
     """
     Executes tasks locally on development environment.
 
@@ -22,8 +24,11 @@ class LocalExecutor:
     """
 
     def __init__(self):
+        super().__init__()
+        self.name = "LocalExecutor"
         self.environment = "local"
         self.debug_mode = os.environ.get("DEBUG", "true").lower() == "true"
+        self.is_ready = True
 
     def execute(self, task: Dict[str, Any]) -> Dict[str, Any]:
         """Execute task locally."""

@@ -285,8 +285,17 @@ class ConstraintValidator:
 
         elif constraint.level == ConstraintLevel.HIGH:
             self.logger.error(f"HIGH VIOLATION: {constraint.name}")
-            # Telegram alert
-            pass
+            try:
+                from NAYA_CORE.integrations.telegram_notifier import TelegramNotifier
+                notifier = TelegramNotifier()
+                notifier.alert_system(
+                    f"⚠️ VIOLATION HIGH: {constraint.name}\n"
+                    f"→ {constraint.error_message}\n"
+                    f"Remédiation: {'; '.join(constraint.remediation_steps[:2])}",
+                    level="HIGH"
+                )
+            except Exception as e:
+                self.logger.warning(f"Telegram alert failed for HIGH violation: {e}")
 
         else:
             self.logger.warning(f"VIOLATION: {constraint.name}")
