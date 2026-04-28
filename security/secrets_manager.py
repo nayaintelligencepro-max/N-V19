@@ -14,7 +14,7 @@ from typing import Dict, Any, Optional
 from datetime import datetime, timedelta
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import hashlib
 
 
@@ -77,8 +77,8 @@ class SecretsManager:
         # Salt fixe pour ce projet (devrait être stocké séparément en prod)
         salt = b"naya_supreme_v19_salt_2026"
 
-        # Dériver clé avec PBKDF2
-        kdf = PBKDF2(
+        # Dériver clé avec PBKDF2HMAC
+        kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
             length=32,
             salt=salt,
