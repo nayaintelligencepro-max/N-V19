@@ -86,7 +86,7 @@ class CashRapideClassifier:
             if days <= rules["max_days"] and value >= rules["min_value"]:
                 if solvability >= rules["solvability_min"]:
                     type_match = any(t in opp_type for t in rules["types"])
-                    if type_match or days <= rules["max_days"]:
+                    if type_match or solvability >= rules["solvability_min"] + 0.1:
                         category = cat
                         confidence = min(0.95, solvability * (1 + (type_match * 0.2)))
                         break
